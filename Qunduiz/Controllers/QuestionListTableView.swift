@@ -103,8 +103,9 @@ class QuestionListTableView: UITableViewController {
     @objc func nextQuestions() {
         if self.index == questions.count - 1  {
             let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-            let vc1 = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             vc.questions = questions
+            vc1.questions = questions
             //vc.index = questions.count - 1
             self.navigationController?.setViewControllers([vc1, vc], animated: true)
         } else {

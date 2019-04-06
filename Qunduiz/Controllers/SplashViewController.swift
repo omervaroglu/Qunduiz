@@ -31,7 +31,7 @@ class SplashViewController: UIViewController {
         guard let filePath = path, let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath))  else { return }
         questionList = Mapper<QuestionList>().map(JSONObject: JSON(jsonData).dictionaryObject)
         
-        let vc = storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let vc = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         vc.questions = (questionList?.questions)!
         self.navigationController?.setViewControllers([vc], animated: true)
     }

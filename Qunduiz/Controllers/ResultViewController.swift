@@ -12,9 +12,12 @@ class ResultViewController: UITableViewController {
     var questions : [Questions] = []
     var index : Int = 0
     override func viewDidLoad() {
-        self.navigationItem.backBarButtonItem?.action
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(highScore))
     }
     
+    @objc func highScore() {
+        
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

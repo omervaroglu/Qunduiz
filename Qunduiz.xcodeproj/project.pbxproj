@@ -33,6 +33,7 @@
 		176DEE6D2254F3D700B54B00 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE6C2254F3D700B54B00 /* AnswerCell.xib */; };
 		176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE6E2254FA6600B54B00 /* UIColor.swift */; };
 		178087B622573FC4005B7888 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178087B522573FC4005B7888 /* ResultViewController.swift */; };
+		17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE042258FFFA00029357 /* HomeViewController.swift */; };
 		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		176DEE6C2254F3D700B54B00 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		176DEE6E2254FA6600B54B00 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		178087B522573FC4005B7888 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		17FABE042258FFFA00029357 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FF84C3A76EF7641A739403C /* Pods-Qunduiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.release.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.release.xcconfig"; sourceTree = "<group>"; };
 		38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qunduiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.debug.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				176DEE2A2254916300B54B00 /* AppDelegate.swift */,
 				176DEE532254A8D000B54B00 /* Models */,
+				176DEE5222549CAD00B54B00 /* Controllers */,
 				176DEE2E2254916300B54B00 /* Main.storyboard */,
 				176DEE362254916500B54B00 /* LaunchScreen.storyboard */,
 				176DEE342254916500B54B00 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			children = (
 				176DEE5C2254C71500B54B00 /* CustomControllers */,
 				176DEE4E2254991B00B54B00 /* SplashViewController.swift */,
+				17FABE042258FFFA00029357 /* HomeViewController.swift */,
 				176DEE2C2254916300B54B00 /* ViewController.swift */,
 				176DEE622254F00900B54B00 /* QuestionListTableView.swift */,
 				178087B522573FC4005B7888 /* ResultViewController.swift */,
@@ -164,7 +168,6 @@
 				176DEE552254A8F100B54B00 /* QuestionList.swift */,
 				176DEE562254A8F100B54B00 /* Questions.swift */,
 				176DEE542254A8F100B54B00 /* Answers.swift */,
-				176DEE5222549CAD00B54B00 /* Controllers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
 				176DEE2D2254916300B54B00 /* ViewController.swift in Sources */,
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
+				17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */,
 				176DEE582254A8F100B54B00 /* QuestionList.swift in Sources */,
 				176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */,
 				176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */,
