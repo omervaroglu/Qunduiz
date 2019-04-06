@@ -1,0 +1,65 @@
+{
+    "Questions":[
+        {
+            "soru":"Hangisi bir hayvandir?",
+            "id":"1",
+            "time":"5",
+            "type":"hayvanlar",
+            "answers":[
+                {
+                    "name":"kunduz",
+                    "isTrue":"true"
+                },
+                {
+                    "name":"cetvel",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"patlican",
+                    "isTrue":"false"
+                }
+            ]
+        },
+        {
+            "soru":"pi sayisi hangisidir?",
+            "id":"2",
+            "time":"5",
+            "type":"matematik",
+            "answers":[
+                {
+                    "name":"5,42",
+                    "isTrue":"false"
+                },
+                {
+                    "name": "3,14",
+                    "isTrue":"true"
+                },
+                {
+                    "name":"2,58",
+                    "isTrue":"false"
+                }
+            ]
+        },
+        {
+            "soru":"istanbul Fatih Sultan Mehmet Tarafindan kac yilinda fethedilmistir?",
+            "id":"3",
+            "time":"5",
+            "type":"tarih",
+            "answers":[
+                {
+                    "name":"1071",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"1299",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"1453",
+                    "isTrue":"true"
+                }
+            ]
+        }
+
+    ]
+}

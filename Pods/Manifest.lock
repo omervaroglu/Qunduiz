@@ -1,0 +1,24 @@
+PODS:
+  - ObjectMapper (3.4.2)
+  - PKHUD (5.2.1)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - ObjectMapper (~> 3.4)
+  - PKHUD (~> 5.1)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ObjectMapper
+    - PKHUD
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 3a5a31be44f508857640b6d13258de4edbc3dd34
+
+COCOAPODS: 1.6.1

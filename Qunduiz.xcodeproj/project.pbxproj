@@ -13,6 +13,27 @@
 		176DEE332254916300B54B00 /* Qunduiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE312254916300B54B00 /* Qunduiz.xcdatamodeld */; };
 		176DEE352254916500B54B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE342254916500B54B00 /* Assets.xcassets */; };
 		176DEE382254916500B54B00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE362254916500B54B00 /* LaunchScreen.storyboard */; };
+		176DEE43225495C400B54B00 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE42225495C400B54B00 /* MainService.swift */; };
+		176DEE4A2254970000B54B00 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE462254970000B54B00 /* Utils.swift */; };
+		176DEE4B2254970000B54B00 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE472254970000B54B00 /* NetworkManager.swift */; };
+		176DEE4C2254970000B54B00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE482254970000B54B00 /* Constants.swift */; };
+		176DEE4D2254970000B54B00 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE492254970000B54B00 /* ViewUtils.swift */; };
+		176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE4E2254991B00B54B00 /* SplashViewController.swift */; };
+		176DEE5122549C5100B54B00 /* mock_questions_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE5022549C5000B54B00 /* mock_questions_data.json */; };
+		176DEE572254A8F100B54B00 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE542254A8F100B54B00 /* Answers.swift */; };
+		176DEE582254A8F100B54B00 /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE552254A8F100B54B00 /* QuestionList.swift */; };
+		176DEE592254A8F100B54B00 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE562254A8F100B54B00 /* Questions.swift */; };
+		176DEE5B2254C70500B54B00 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE5A2254C70500B54B00 /* BaseNavigationController.swift */; };
+		176DEE5E2254CF0A00B54B00 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE5D2254CF0A00B54B00 /* CardView.swift */; };
+		176DEE612254D43F00B54B00 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE602254D43F00B54B00 /* CustomButton.swift */; };
+		176DEE632254F00900B54B00 /* QuestionListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE622254F00900B54B00 /* QuestionListTableView.swift */; };
+		176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE652254F1B200B54B00 /* QuestionCell.swift */; };
+		176DEE682254F26400B54B00 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE672254F26400B54B00 /* QuestionCell.xib */; };
+		176DEE6B2254F39B00B54B00 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE6A2254F39B00B54B00 /* AnswerCell.swift */; };
+		176DEE6D2254F3D700B54B00 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE6C2254F3D700B54B00 /* AnswerCell.xib */; };
+		176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE6E2254FA6600B54B00 /* UIColor.swift */; };
+		178087B622573FC4005B7888 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178087B522573FC4005B7888 /* ResultViewController.swift */; };
+		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +45,29 @@
 		176DEE342254916500B54B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		176DEE372254916500B54B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		176DEE392254916500B54B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176DEE42225495C400B54B00 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		176DEE462254970000B54B00 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		176DEE472254970000B54B00 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		176DEE482254970000B54B00 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		176DEE492254970000B54B00 /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		176DEE4E2254991B00B54B00 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		176DEE5022549C5000B54B00 /* mock_questions_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_questions_data.json; sourceTree = "<group>"; };
+		176DEE542254A8F100B54B00 /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
+		176DEE552254A8F100B54B00 /* QuestionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
+		176DEE562254A8F100B54B00 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		176DEE5A2254C70500B54B00 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		176DEE5D2254CF0A00B54B00 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		176DEE602254D43F00B54B00 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		176DEE622254F00900B54B00 /* QuestionListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListTableView.swift; sourceTree = "<group>"; };
+		176DEE652254F1B200B54B00 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		176DEE672254F26400B54B00 /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		176DEE6A2254F39B00B54B00 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		176DEE6C2254F3D700B54B00 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		176DEE6E2254FA6600B54B00 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		178087B522573FC4005B7888 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		2FF84C3A76EF7641A739403C /* Pods-Qunduiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.release.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.release.xcconfig"; sourceTree = "<group>"; };
+		38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qunduiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.debug.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +87,8 @@
 			children = (
 				176DEE292254916300B54B00 /* Qunduiz */,
 				176DEE282254916300B54B00 /* Products */,
+				223F5218B64A6DAD6FF3A8E1 /* Pods */,
+				19EDBDA986472366EB3EFFF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +104,131 @@
 			isa = PBXGroup;
 			children = (
 				176DEE2A2254916300B54B00 /* AppDelegate.swift */,
-				176DEE2C2254916300B54B00 /* ViewController.swift */,
+				176DEE532254A8D000B54B00 /* Models */,
 				176DEE2E2254916300B54B00 /* Main.storyboard */,
-				176DEE342254916500B54B00 /* Assets.xcassets */,
 				176DEE362254916500B54B00 /* LaunchScreen.storyboard */,
+				176DEE342254916500B54B00 /* Assets.xcassets */,
+				176DEE412254957500B54B00 /* Helpers */,
+				176DEE45225496E000B54B00 /* Utils */,
 				176DEE392254916500B54B00 /* Info.plist */,
 				176DEE312254916300B54B00 /* Qunduiz.xcdatamodeld */,
+				176DEE5022549C5000B54B00 /* mock_questions_data.json */,
 			);
 			path = Qunduiz;
+			sourceTree = "<group>";
+		};
+		176DEE412254957500B54B00 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE702254FA6A00B54B00 /* Extension */,
+				176DEE5F2254CF4F00B54B00 /* CustomUI */,
+				176DEE44225495D900B54B00 /* Services */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		176DEE44225495D900B54B00 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE42225495C400B54B00 /* MainService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		176DEE45225496E000B54B00 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE482254970000B54B00 /* Constants.swift */,
+				176DEE472254970000B54B00 /* NetworkManager.swift */,
+				176DEE462254970000B54B00 /* Utils.swift */,
+				176DEE492254970000B54B00 /* ViewUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		176DEE5222549CAD00B54B00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE5C2254C71500B54B00 /* CustomControllers */,
+				176DEE4E2254991B00B54B00 /* SplashViewController.swift */,
+				176DEE2C2254916300B54B00 /* ViewController.swift */,
+				176DEE622254F00900B54B00 /* QuestionListTableView.swift */,
+				178087B522573FC4005B7888 /* ResultViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		176DEE532254A8D000B54B00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE552254A8F100B54B00 /* QuestionList.swift */,
+				176DEE562254A8F100B54B00 /* Questions.swift */,
+				176DEE542254A8F100B54B00 /* Answers.swift */,
+				176DEE5222549CAD00B54B00 /* Controllers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		176DEE5C2254C71500B54B00 /* CustomControllers */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE5A2254C70500B54B00 /* BaseNavigationController.swift */,
+			);
+			path = CustomControllers;
+			sourceTree = "<group>";
+		};
+		176DEE5F2254CF4F00B54B00 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE5D2254CF0A00B54B00 /* CardView.swift */,
+				176DEE602254D43F00B54B00 /* CustomButton.swift */,
+				176DEE642254F18B00B54B00 /* QuestionCell */,
+				176DEE692254F36100B54B00 /* AnswerCell */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		176DEE642254F18B00B54B00 /* QuestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE652254F1B200B54B00 /* QuestionCell.swift */,
+				176DEE672254F26400B54B00 /* QuestionCell.xib */,
+			);
+			path = QuestionCell;
+			sourceTree = "<group>";
+		};
+		176DEE692254F36100B54B00 /* AnswerCell */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE6A2254F39B00B54B00 /* AnswerCell.swift */,
+				176DEE6C2254F3D700B54B00 /* AnswerCell.xib */,
+			);
+			path = AnswerCell;
+			sourceTree = "<group>";
+		};
+		176DEE702254FA6A00B54B00 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				176DEE6E2254FA6600B54B00 /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		19EDBDA986472366EB3EFFF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		223F5218B64A6DAD6FF3A8E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */,
+				2FF84C3A76EF7641A739403C /* Pods-Qunduiz.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 176DEE3C2254916500B54B00 /* Build configuration list for PBXNativeTarget "Qunduiz" */;
 			buildPhases = (
+				EDEBBFB1180EF4F992DB55B3 /* [CP] Check Pods Manifest.lock */,
 				176DEE232254916300B54B00 /* Sources */,
 				176DEE242254916300B54B00 /* Frameworks */,
 				176DEE252254916300B54B00 /* Resources */,
+				DE8ACFAC8DB783DEBA125CD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,21 +292,92 @@
 			buildActionMask = 2147483647;
 			files = (
 				176DEE382254916500B54B00 /* LaunchScreen.storyboard in Resources */,
+				176DEE6D2254F3D700B54B00 /* AnswerCell.xib in Resources */,
 				176DEE352254916500B54B00 /* Assets.xcassets in Resources */,
+				176DEE682254F26400B54B00 /* QuestionCell.xib in Resources */,
+				176DEE5122549C5100B54B00 /* mock_questions_data.json in Resources */,
 				176DEE302254916300B54B00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DE8ACFAC8DB783DEBA125CD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Qunduiz/Pods-Qunduiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Qunduiz/Pods-Qunduiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDEBBFB1180EF4F992DB55B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Qunduiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		176DEE232254916300B54B00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176DEE5B2254C70500B54B00 /* BaseNavigationController.swift in Sources */,
+				176DEE4B2254970000B54B00 /* NetworkManager.swift in Sources */,
+				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
 				176DEE2D2254916300B54B00 /* ViewController.swift in Sources */,
+				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
+				176DEE582254A8F100B54B00 /* QuestionList.swift in Sources */,
+				176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */,
+				176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */,
+				176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */,
 				176DEE332254916300B54B00 /* Qunduiz.xcdatamodeld in Sources */,
+				176DEE5E2254CF0A00B54B00 /* CardView.swift in Sources */,
+				176DEE4C2254970000B54B00 /* Constants.swift in Sources */,
+				176DEE43225495C400B54B00 /* MainService.swift in Sources */,
+				176DEE592254A8F100B54B00 /* Questions.swift in Sources */,
+				176DEE4D2254970000B54B00 /* ViewUtils.swift in Sources */,
+				178087B622573FC4005B7888 /* ResultViewController.swift in Sources */,
+				176DEE632254F00900B54B00 /* QuestionListTableView.swift in Sources */,
+				176DEE6B2254F39B00B54B00 /* AnswerCell.swift in Sources */,
 				176DEE2B2254916300B54B00 /* AppDelegate.swift in Sources */,
+				176DEE612254D43F00B54B00 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +521,13 @@
 		};
 		176DEE3D2254916500B54B00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR952S746H;
 				INFOPLIST_FILE = Qunduiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +541,13 @@
 		};
 		176DEE3E2254916500B54B00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FF84C3A76EF7641A739403C /* Pods-Qunduiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PR952S746H;
 				INFOPLIST_FILE = Qunduiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

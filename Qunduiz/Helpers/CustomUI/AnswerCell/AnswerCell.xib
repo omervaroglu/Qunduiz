@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="142" id="hWe-Q4-to9" customClass="AnswerCell" customModule="Qunduiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="142"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hWe-Q4-to9" id="wfz-gd-4ym">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="141.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Im-u3-aDa">
+                        <rect key="frame" x="16" y="16" width="297" height="109.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cevap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQo-sO-FAl">
+                                <rect key="frame" x="16" y="16" width="265" height="77.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cQo-sO-FAl" secondAttribute="bottom" constant="16" id="1S7-34-MHw"/>
+                            <constraint firstItem="cQo-sO-FAl" firstAttribute="leading" secondItem="9Im-u3-aDa" secondAttribute="leading" constant="16" id="3SA-mb-sP8"/>
+                            <constraint firstAttribute="trailing" secondItem="cQo-sO-FAl" secondAttribute="trailing" constant="16" id="JEE-9q-taQ"/>
+                            <constraint firstItem="cQo-sO-FAl" firstAttribute="top" secondItem="9Im-u3-aDa" secondAttribute="top" constant="16" id="uB7-U1-P6D"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9Im-u3-aDa" firstAttribute="top" secondItem="wfz-gd-4ym" secondAttribute="top" constant="16" id="2cW-8v-mF9"/>
+                    <constraint firstAttribute="bottom" secondItem="9Im-u3-aDa" secondAttribute="bottom" constant="16" id="bVu-Rg-zOW"/>
+                    <constraint firstItem="9Im-u3-aDa" firstAttribute="leading" secondItem="wfz-gd-4ym" secondAttribute="leading" constant="16" id="dRU-WP-Y8o"/>
+                    <constraint firstAttribute="trailing" secondItem="9Im-u3-aDa" secondAttribute="trailing" constant="16" id="vbU-B6-BWM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="answerLabel" destination="cQo-sO-FAl" id="eor-Tr-rCk"/>
+                <outlet property="answerView" destination="9Im-u3-aDa" id="9Ge-AS-ebf"/>
+            </connections>
+            <point key="canvasLocation" x="460" y="295.05247376311848"/>
+        </tableViewCell>
+    </objects>
+</document>
