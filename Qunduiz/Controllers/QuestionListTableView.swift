@@ -15,6 +15,7 @@ class QuestionListTableView: UITableViewController {
     var index : Int = 0{
         didSet{
             tableView.reloadData()
+            setSelected()
         }
     }
    
@@ -22,7 +23,10 @@ class QuestionListTableView: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(nextQuestions))
 
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        setSelected()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -74,13 +78,13 @@ class QuestionListTableView: UITableViewController {
             let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
 
             if questions[self.index].answers![indexPath.row].isSelected {
-                setSelected(indexpath: indexPath)
+                setSelected()
                 questions[self.index].answers![indexPath.row].isSelected = false
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
                 print(questions[self.index].answers![indexPath.row].isSelected)
             } else {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
-                setSelected(indexpath: indexPath)
+                setSelected()
                 questions[self.index].answers![indexPath.row].isSelected = true
                 print(questions[self.index].answers![indexPath.row].isSelected)
             }
@@ -90,7 +94,7 @@ class QuestionListTableView: UITableViewController {
             self.tableView.reloadData()
     }
     
-    func setSelected(indexpath : IndexPath) {
+    func setSelected() {
         for number in  0...questions[self.index].answers!.count - 1{
             if questions[self.index].answers![number].isSelected {
                 questions[self.index].answers![number].isSelected = false

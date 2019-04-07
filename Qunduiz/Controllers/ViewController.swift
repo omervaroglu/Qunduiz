@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         if listSelectedLabel.text ==  "✔️" {
             let vc = storyboard!.instantiateViewController(withIdentifier: "QuestionListTableView") as! QuestionListTableView
             vc.questions = questions
+            vc.tableView.reloadData()
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
             
