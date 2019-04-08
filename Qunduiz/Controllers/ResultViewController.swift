@@ -19,6 +19,8 @@ class ResultViewController: UITableViewController {
     }
     
     @objc func highScore() {
+        scoreArray.append(score)
+        UserDefaults.standard.set(scoreArray, forKey: "scoreArray")
         let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController")
         navigationController?.pushViewController(vc, animated: true)
     }

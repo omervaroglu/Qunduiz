@@ -21,7 +21,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.topItem?.title = "Qunduiz"
-        //self.storedName = UserDefaults.standard.array(forKey: "nickname") as! [String]
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.storedName = UserDefaults.standard.array(forKey: "nickname") as! [String]
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
@@ -31,6 +34,7 @@ class HomeViewController: UIViewController {
         }else {
             storedName.append(nameField.text ?? "")
             UserDefaults.standard.set(storedName, forKey: "nickname")
+            print(storedName)
         }
         let vc = storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.questions = questions
