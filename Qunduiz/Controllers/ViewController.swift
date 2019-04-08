@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     var questions : [Questions] = []
     var answers : [Answers] = []
+    var name: String = ""
+    var score: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

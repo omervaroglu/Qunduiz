@@ -34,6 +34,9 @@
 		176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE6E2254FA6600B54B00 /* UIColor.swift */; };
 		178087B622573FC4005B7888 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178087B522573FC4005B7888 /* ResultViewController.swift */; };
 		17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE042258FFFA00029357 /* HomeViewController.swift */; };
+		17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */; };
+		17FABE0A225BA90C00029357 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FABE09225BA90C00029357 /* HighScoreCell.xib */; };
+		17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE0B225BAA4600029357 /* HighScoreCell.swift */; };
 		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		176DEE6E2254FA6600B54B00 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		178087B522573FC4005B7888 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		17FABE042258FFFA00029357 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewController.swift; sourceTree = "<group>"; };
+		17FABE09225BA90C00029357 /* HighScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighScoreCell.xib; sourceTree = "<group>"; };
+		17FABE0B225BAA4600029357 /* HighScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreCell.swift; sourceTree = "<group>"; };
 		2FF84C3A76EF7641A739403C /* Pods-Qunduiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.release.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.release.xcconfig"; sourceTree = "<group>"; };
 		38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qunduiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.debug.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 				176DEE2C2254916300B54B00 /* ViewController.swift */,
 				176DEE622254F00900B54B00 /* QuestionListTableView.swift */,
 				178087B522573FC4005B7888 /* ResultViewController.swift */,
+				17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 			children = (
 				176DEE5D2254CF0A00B54B00 /* CardView.swift */,
 				176DEE602254D43F00B54B00 /* CustomButton.swift */,
+				17FABE08225BA8DD00029357 /* HighScoreCell */,
 				176DEE642254F18B00B54B00 /* QuestionCell */,
 				176DEE692254F36100B54B00 /* AnswerCell */,
 			);
@@ -215,6 +223,15 @@
 				176DEE6E2254FA6600B54B00 /* UIColor.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		17FABE08225BA8DD00029357 /* HighScoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				17FABE0B225BAA4600029357 /* HighScoreCell.swift */,
+				17FABE09225BA90C00029357 /* HighScoreCell.xib */,
+			);
+			path = HighScoreCell;
 			sourceTree = "<group>";
 		};
 		19EDBDA986472366EB3EFFF3 /* Frameworks */ = {
@@ -296,6 +313,7 @@
 			files = (
 				176DEE382254916500B54B00 /* LaunchScreen.storyboard in Resources */,
 				176DEE6D2254F3D700B54B00 /* AnswerCell.xib in Resources */,
+				17FABE0A225BA90C00029357 /* HighScoreCell.xib in Resources */,
 				176DEE352254916500B54B00 /* Assets.xcassets in Resources */,
 				176DEE682254F26400B54B00 /* QuestionCell.xib in Resources */,
 				176DEE5122549C5100B54B00 /* mock_questions_data.json in Resources */,
@@ -363,6 +381,7 @@
 			files = (
 				176DEE5B2254C70500B54B00 /* BaseNavigationController.swift in Sources */,
 				176DEE4B2254970000B54B00 /* NetworkManager.swift in Sources */,
+				17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */,
 				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
 				176DEE2D2254916300B54B00 /* ViewController.swift in Sources */,
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
@@ -371,6 +390,7 @@
 				176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */,
 				176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */,
 				176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */,
+				17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */,
 				176DEE332254916300B54B00 /* Qunduiz.xcdatamodeld in Sources */,
 				176DEE5E2254CF0A00B54B00 /* CardView.swift in Sources */,
 				176DEE4C2254970000B54B00 /* Constants.swift in Sources */,

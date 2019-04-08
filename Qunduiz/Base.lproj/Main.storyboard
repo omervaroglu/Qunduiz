@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2447" y="325"/>
+            <point key="canvasLocation" x="2350" y="747"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Zak-fO-2Pf">
@@ -143,8 +143,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="nickname"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh0-Tc-nLH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh0-Tc-nLH" customClass="CustomButton" customModule="Qunduiz" customModuleProvider="target">
                                 <rect key="frame" x="100" y="182" width="175" height="60"/>
+                                <color key="backgroundColor" red="0.63529411759999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="elY-mr-A6d"/>
                                 </constraints>
@@ -155,11 +156,15 @@
                                     <action selector="startButtonAction:" destination="xAF-i4-dUX" eventType="touchUpInside" id="cpv-vd-7LQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-ti-f9E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-ti-f9E" customClass="CustomButton" customModule="Qunduiz" customModuleProvider="target">
                                 <rect key="frame" x="100" y="274" width="175" height="60"/>
+                                <color key="backgroundColor" red="0.63529411759999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="YUKSEK SKOR">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UzK-dt-SH5" kind="show" id="DC3-g6-O18"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -213,7 +218,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFd-gl-82z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="813"/>
+            <point key="canvasLocation" x="3046" y="1241"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="kOg-s0-AAE">
@@ -241,7 +246,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEh-Rs-SrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="1671"/>
+            <point key="canvasLocation" x="3983" y="1241"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="u76-BZ-Cmn">
@@ -285,6 +290,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHX-Xp-wGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-703.20000000000005" y="63.418290854572717"/>
+        </scene>
+        <!--High Score Table View Controller-->
+        <scene sceneID="5cK-qv-0aS">
+            <objects>
+                <tableViewController storyboardIdentifier="HighScoreTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UzK-dt-SH5" customClass="HighScoreTableViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="52C-fy-gYH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fzZ-om-sqZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fzZ-om-sqZ" id="tu4-qK-PaF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UzK-dt-SH5" id="3TK-N0-atU"/>
+                            <outlet property="delegate" destination="UzK-dt-SH5" id="TSd-pN-URV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qo9-Ch-1Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350" y="-843"/>
         </scene>
     </scenes>
 </document>

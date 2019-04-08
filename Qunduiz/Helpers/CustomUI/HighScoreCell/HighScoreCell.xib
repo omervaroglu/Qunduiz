@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="mpQ-AD-Ajk" customClass="HighScoreCell" customModule="Qunduiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mpQ-AD-Ajk" id="guz-Ee-a5p">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="116.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sS-Er-P1G">
+                        <rect key="frame" x="8" y="8" width="415" height="100.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvS-ON-wEC">
+                                <rect key="frame" x="16" y="16" width="273" height="68.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI2-xm-y7g">
+                                <rect key="frame" x="349" y="16" width="50" height="68.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="xoL-6M-mKx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iI2-xm-y7g" secondAttribute="bottom" constant="16" id="0b0-qq-98j"/>
+                            <constraint firstAttribute="trailing" secondItem="iI2-xm-y7g" secondAttribute="trailing" constant="16" id="7XT-vl-d2v"/>
+                            <constraint firstItem="iI2-xm-y7g" firstAttribute="leading" secondItem="vvS-ON-wEC" secondAttribute="trailing" constant="60" id="X8M-0c-4Ph"/>
+                            <constraint firstAttribute="bottom" secondItem="vvS-ON-wEC" secondAttribute="bottom" constant="16" id="bSo-pU-hK7"/>
+                            <constraint firstItem="iI2-xm-y7g" firstAttribute="top" secondItem="9sS-Er-P1G" secondAttribute="top" constant="16" id="bXR-tB-yvp"/>
+                            <constraint firstItem="vvS-ON-wEC" firstAttribute="leading" secondItem="9sS-Er-P1G" secondAttribute="leading" constant="16" id="hxB-o6-AAz"/>
+                            <constraint firstItem="vvS-ON-wEC" firstAttribute="top" secondItem="9sS-Er-P1G" secondAttribute="top" constant="16" id="pBo-dw-0xi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9sS-Er-P1G" secondAttribute="bottom" constant="8" id="7qa-3w-MLB"/>
+                    <constraint firstAttribute="trailing" secondItem="9sS-Er-P1G" secondAttribute="trailing" constant="8" id="q71-YU-TI3"/>
+                    <constraint firstItem="9sS-Er-P1G" firstAttribute="top" secondItem="guz-Ee-a5p" secondAttribute="top" constant="8" id="vhM-c6-xxJ"/>
+                    <constraint firstItem="9sS-Er-P1G" firstAttribute="leading" secondItem="guz-Ee-a5p" secondAttribute="leading" constant="8" id="zGz-G1-faG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="highScoreView" destination="9sS-Er-P1G" id="9dJ-NZ-TEk"/>
+                <outlet property="scoreLabel" destination="iI2-xm-y7g" id="vm6-oz-H0o"/>
+                <outlet property="scoreNameLabel" destination="vvS-ON-wEC" id="LVP-oE-Iwy"/>
+            </connections>
+            <point key="canvasLocation" x="122.40000000000001" y="145.27736131934034"/>
+        </tableViewCell>
+    </objects>
+</document>

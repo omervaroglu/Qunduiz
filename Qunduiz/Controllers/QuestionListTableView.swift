@@ -18,6 +18,9 @@ class QuestionListTableView: UITableViewController {
             setSelected()
         }
     }
+    
+    var name: String = ""
+    var score: Int = 0
    
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(nextQuestions))
