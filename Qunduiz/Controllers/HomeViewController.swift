@@ -24,7 +24,9 @@ class HomeViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.storedName = UserDefaults.standard.array(forKey: "nickname") as! [String]
+        if UserDefaults.standard.array(forKey: "nickname") != nil {
+            self.storedName = UserDefaults.standard.array(forKey: "nickname") as! [String]
+        }
     }
     
     @IBAction func startButtonAction(_ sender: Any) {

@@ -20,10 +20,18 @@ class HighScoreTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        scoreArray = UserDefaults.standard.array(forKey: "scoreArray") as! [Int]
-        nameArray = UserDefaults.standard.array(forKey: "nickname") as! [String]
-        tableView.reloadData()
+    override func viewDidLoad() {
+        if UserDefaults.standard.array(forKey: "scoreArray") != nil {
+            scoreArray = UserDefaults.standard.array(forKey: "scoreArray") as! [Int]
+            nameArray = UserDefaults.standard.array(forKey: "nickname") as! [String]
+            tableView.reloadData()
+            print(scoreArray, nameArray)
+        } 
+    }
+    
+    @objc func backAction() {
+        let vc = storyboard!.instantiateViewController(withIdentifier: "HomeViewController")
+        navigationController?.setViewControllers([vc], animated: true)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

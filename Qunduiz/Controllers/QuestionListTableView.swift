@@ -101,8 +101,6 @@ class QuestionListTableView: UITableViewController {
         for number in  0...questions[self.index].answers!.count - 1{
             if questions[self.index].answers![number].isSelected {
                 questions[self.index].answers![number].isSelected = false
-//                let cell = tableView.cellForRow(at: indexpath) as! AnswerCell
-//                cell.answerView.layer.borderColor = UIColor.orange.cgColor
             }
         }
     }
@@ -113,7 +111,6 @@ class QuestionListTableView: UITableViewController {
             let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             vc.questions = questions
             vc1.questions = questions
-            //vc.index = questions.count - 1
             self.navigationController?.setViewControllers([vc1, vc], animated: true)
         } else {
             self.index = self.index + 1
