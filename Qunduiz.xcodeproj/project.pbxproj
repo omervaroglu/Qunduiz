@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17039A51225E276C00499736 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17039A50225E276C00499736 /* ListTableViewController.swift */; };
 		176DEE2B2254916300B54B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE2A2254916300B54B00 /* AppDelegate.swift */; };
 		176DEE2D2254916300B54B00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE2C2254916300B54B00 /* ViewController.swift */; };
 		176DEE302254916300B54B00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE2E2254916300B54B00 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17039A50225E276C00499736 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		176DEE272254916300B54B00 /* Qunduiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qunduiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176DEE2A2254916300B54B00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176DEE2C2254916300B54B00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				17FABE042258FFFA00029357 /* HomeViewController.swift */,
 				176DEE2C2254916300B54B00 /* ViewController.swift */,
 				176DEE622254F00900B54B00 /* QuestionListTableView.swift */,
+				17039A50225E276C00499736 /* ListTableViewController.swift */,
 				178087B522573FC4005B7888 /* ResultViewController.swift */,
 				17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */,
 			);
@@ -382,6 +385,7 @@
 				176DEE5B2254C70500B54B00 /* BaseNavigationController.swift in Sources */,
 				176DEE4B2254970000B54B00 /* NetworkManager.swift in Sources */,
 				17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */,
+				17039A51225E276C00499736 /* ListTableViewController.swift in Sources */,
 				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
 				176DEE2D2254916300B54B00 /* ViewController.swift in Sources */,
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
