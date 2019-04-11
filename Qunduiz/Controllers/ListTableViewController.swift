@@ -11,38 +11,79 @@ import UIKit
 class ListTableViewController: UITableViewController {
     var questions : [Questions] = []
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+    
+    override func viewDidLoad() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(finishedQuiz))
+
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return questions.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return questions[section].soru
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return questions.count
-        case 1:
-            return 3
-        default:
-            return 1
-        }
+        return questions[section].answers?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = questions[section].soru
+        return label
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell" )
-            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-            cell.questionLabel.text = questions[indexPath.row].soru
-            return cell
-        case 1:
             tableView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell" )
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath) as! AnswerCell
-            cell.answerLabel.text = questions[indexPath.row].answers![indexPath.row].name
-            if questions[indexPath.row].answers![indexPath.row].isSelected {
+            cell.answerLabel.text = questions[indexPath.section].answers![indexPath.row].name
+            if questions[indexPath.section].answers![indexPath.row].isSelected {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
             }else {
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
             }
             return cell
-        default:
-            return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            print(" Row \(indexPath.row) selected")
+            let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
+            
+            if questions[indexPath.section].answers![indexPath.row].isSelected {
+                setSelected(indexpath: indexPath.section)
+                questions[indexPath.section].answers![indexPath.row].isSelected = false
+                cell.answerView.layer.borderColor = UIColor.orange.cgColor
+                print(questions[indexPath.section].answers![indexPath.row].isSelected)
+            } else {
+                cell.answerView.layer.borderColor = UIColor.cyan.cgColor
+                setSelected(indexpath: indexPath.section)
+                questions[indexPath.section].answers![indexPath.row].isSelected = true
+                print(questions[indexPath.section].answers![indexPath.row].isSelected)
+            }
+        self.tableView.reloadData()
+    }
+
+    func setSelected(indexpath: Int) {
+        for number in  0...questions[indexpath].answers!.count - 1{
+            if questions[indexpath].answers![number].isSelected {
+                questions[indexpath].answers![number].isSelected = false
+            }
         }
     }
+    @objc func finishedQuiz () {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        vc.questions = questions
+        vc1.questions = questions
+        self.navigationController?.setViewControllers([vc1, vc], animated: true)
+    }
+    
 }
