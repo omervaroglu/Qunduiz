@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 import SwiftyJSON
 
-class QuestionListTableView: UITableViewController {
+class PagingTableViewController: UITableViewController {
     var questions : [Questions] = []
     var index : Int = 0{
         didSet{
@@ -107,6 +107,7 @@ class QuestionListTableView: UITableViewController {
     
     @objc func nextQuestions() {
         if self.index == questions.count - 1  {
+            self.index = 0
             let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
             let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             vc.questions = questions

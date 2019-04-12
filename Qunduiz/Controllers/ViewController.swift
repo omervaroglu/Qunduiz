@@ -65,13 +65,16 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if singleSelectedLabel.text == "✔️"  {
-            let vc = storyboard!.instantiateViewController(withIdentifier: "QuestionListTableView") as! QuestionListTableView
+            let vc = storyboard!.instantiateViewController(withIdentifier: "PagingTableViewController") as! PagingTableViewController
             vc.questions = questions
             vc.tableView.reloadData()
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if lineSelectedLabel.text == "✔️" {
-            
+            let vc = storyboard!.instantiateViewController(withIdentifier: "QuestionHeaderTableViewController") as! QuestionHeaderTableViewController
+            vc.questions = questions
+            vc.tableView.reloadData()
+            self.navigationController?.pushViewController(vc, animated: true)
         }else {
             ViewUtils.showAlert(withController: self, title: "HATA!", message: "Lutfen gorunum seciniz.")
 

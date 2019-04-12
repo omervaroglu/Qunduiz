@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ZDO-hO-uBm" secondAttribute="trailing" constant="60" id="Zzb-eZ-f7d"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8k-CF-HfX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8k-CF-HfX" customClass="CardView" customModule="Qunduiz" customModuleProvider="target">
                                 <rect key="frame" x="32" y="309" width="150" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sirali Gorunum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHh-60-mRO">
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349.5999999999999" y="745.27736131934034"/>
+            <point key="canvasLocation" x="2518" y="440"/>
         </scene>
         <!--List Table View Controller-->
         <scene sceneID="WdS-mr-9wF">
@@ -154,7 +154,63 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4b-wB-Ica" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3105" y="745"/>
+            <point key="canvasLocation" x="2518" y="1424"/>
+        </scene>
+        <!--Question Header Table View Controller-->
+        <scene sceneID="coD-Kr-3Tk">
+            <objects>
+                <tableViewController storyboardIdentifier="QuestionHeaderTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LD3-mP-jbL" customClass="QuestionHeaderTableViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N8c-zT-Yiw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7EF-cr-IZ3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7EF-cr-IZ3" id="HET-Sq-TQT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LD3-mP-jbL" id="xbc-tV-nud"/>
+                            <outlet property="delegate" destination="LD3-mP-jbL" id="K1d-zr-FVC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgM-U9-SzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3463" y="1424"/>
+        </scene>
+        <!--Question Paging Table View Controller-->
+        <scene sceneID="me0-OA-kii">
+            <objects>
+                <tableViewController storyboardIdentifier="QuestionPagingTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3SZ-Rz-Azt" customClass="QuestionPagingTableViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GC0-UG-2cR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="n3W-tp-MOW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n3W-tp-MOW" id="Tgs-63-TL2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3SZ-Rz-Azt" id="a0L-9d-TqG"/>
+                            <outlet property="delegate" destination="3SZ-Rz-Azt" id="VJC-OM-gvi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eo6-SB-JFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3462" y="2181"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Zak-fO-2Pf">
@@ -220,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="1317.5999999999999" y="62.518740629685162"/>
         </scene>
-        <!--Question List Table View-->
+        <!--Paging Table View Controller-->
         <scene sceneID="mGT-A5-6IN">
             <objects>
-                <tableViewController storyboardIdentifier="QuestionListTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wP6-0d-wUO" customClass="QuestionListTableView" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PagingTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wP6-0d-wUO" customClass="PagingTableViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fgc-J7-QEa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +302,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFd-gl-82z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3106" y="1427"/>
+            <point key="canvasLocation" x="1618" y="1425"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="kOg-s0-AAE">
@@ -274,7 +330,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEh-Rs-SrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3884" y="1426"/>
+            <point key="canvasLocation" x="1617" y="2206"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="u76-BZ-Cmn">
@@ -345,7 +401,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo9-Ch-1Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2350" y="-843"/>
+            <point key="canvasLocation" x="2518" y="-446"/>
         </scene>
     </scenes>
 </document>

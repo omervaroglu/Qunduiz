@@ -27,13 +27,15 @@
 		176DEE5B2254C70500B54B00 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE5A2254C70500B54B00 /* BaseNavigationController.swift */; };
 		176DEE5E2254CF0A00B54B00 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE5D2254CF0A00B54B00 /* CardView.swift */; };
 		176DEE612254D43F00B54B00 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE602254D43F00B54B00 /* CustomButton.swift */; };
-		176DEE632254F00900B54B00 /* QuestionListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE622254F00900B54B00 /* QuestionListTableView.swift */; };
+		176DEE632254F00900B54B00 /* PagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE622254F00900B54B00 /* PagingTableViewController.swift */; };
 		176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE652254F1B200B54B00 /* QuestionCell.swift */; };
 		176DEE682254F26400B54B00 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE672254F26400B54B00 /* QuestionCell.xib */; };
 		176DEE6B2254F39B00B54B00 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE6A2254F39B00B54B00 /* AnswerCell.swift */; };
 		176DEE6D2254F3D700B54B00 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE6C2254F3D700B54B00 /* AnswerCell.xib */; };
 		176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE6E2254FA6600B54B00 /* UIColor.swift */; };
 		178087B622573FC4005B7888 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178087B522573FC4005B7888 /* ResultViewController.swift */; };
+		17B75E382260E7F60006C591 /* QuestionHeaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B75E372260E7F60006C591 /* QuestionHeaderTableViewController.swift */; };
+		17B75E3A2260EBDB0006C591 /* QuestionPagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B75E392260EBDB0006C591 /* QuestionPagingTableViewController.swift */; };
 		17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE042258FFFA00029357 /* HomeViewController.swift */; };
 		17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */; };
 		17FABE0A225BA90C00029357 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FABE09225BA90C00029357 /* HighScoreCell.xib */; };
@@ -64,13 +66,15 @@
 		176DEE5A2254C70500B54B00 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		176DEE5D2254CF0A00B54B00 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		176DEE602254D43F00B54B00 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		176DEE622254F00900B54B00 /* QuestionListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListTableView.swift; sourceTree = "<group>"; };
+		176DEE622254F00900B54B00 /* PagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTableViewController.swift; sourceTree = "<group>"; };
 		176DEE652254F1B200B54B00 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		176DEE672254F26400B54B00 /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 		176DEE6A2254F39B00B54B00 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		176DEE6C2254F3D700B54B00 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		176DEE6E2254FA6600B54B00 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		178087B522573FC4005B7888 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		17B75E372260E7F60006C591 /* QuestionHeaderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHeaderTableViewController.swift; sourceTree = "<group>"; };
+		17B75E392260EBDB0006C591 /* QuestionPagingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPagingTableViewController.swift; sourceTree = "<group>"; };
 		17FABE042258FFFA00029357 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewController.swift; sourceTree = "<group>"; };
 		17FABE09225BA90C00029357 /* HighScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighScoreCell.xib; sourceTree = "<group>"; };
@@ -164,8 +168,10 @@
 				176DEE4E2254991B00B54B00 /* SplashViewController.swift */,
 				17FABE042258FFFA00029357 /* HomeViewController.swift */,
 				176DEE2C2254916300B54B00 /* ViewController.swift */,
-				176DEE622254F00900B54B00 /* QuestionListTableView.swift */,
+				176DEE622254F00900B54B00 /* PagingTableViewController.swift */,
 				17039A50225E276C00499736 /* ListTableViewController.swift */,
+				17B75E372260E7F60006C591 /* QuestionHeaderTableViewController.swift */,
+				17B75E392260EBDB0006C591 /* QuestionPagingTableViewController.swift */,
 				178087B522573FC4005B7888 /* ResultViewController.swift */,
 				17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */,
 			);
@@ -393,16 +399,18 @@
 				176DEE582254A8F100B54B00 /* QuestionList.swift in Sources */,
 				176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */,
 				176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */,
+				17B75E382260E7F60006C591 /* QuestionHeaderTableViewController.swift in Sources */,
 				176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */,
 				17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */,
 				176DEE332254916300B54B00 /* Qunduiz.xcdatamodeld in Sources */,
+				17B75E3A2260EBDB0006C591 /* QuestionPagingTableViewController.swift in Sources */,
 				176DEE5E2254CF0A00B54B00 /* CardView.swift in Sources */,
 				176DEE4C2254970000B54B00 /* Constants.swift in Sources */,
 				176DEE43225495C400B54B00 /* MainService.swift in Sources */,
 				176DEE592254A8F100B54B00 /* Questions.swift in Sources */,
 				176DEE4D2254970000B54B00 /* ViewUtils.swift in Sources */,
 				178087B622573FC4005B7888 /* ResultViewController.swift in Sources */,
-				176DEE632254F00900B54B00 /* QuestionListTableView.swift in Sources */,
+				176DEE632254F00900B54B00 /* PagingTableViewController.swift in Sources */,
 				176DEE6B2254F39B00B54B00 /* AnswerCell.swift in Sources */,
 				176DEE2B2254916300B54B00 /* AppDelegate.swift in Sources */,
 				176DEE612254D43F00B54B00 /* CustomButton.swift in Sources */,
