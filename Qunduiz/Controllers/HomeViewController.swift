@@ -17,11 +17,12 @@ class HomeViewController: UIViewController {
     var name: String = ""
     var score: Int = 0
     var storedName: [String] = []
+    var indexpath = 0
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.topItem?.title = "Qunduiz"
-        
+        setSelected()
     }
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults.standard.array(forKey: "nickname") != nil {
@@ -30,7 +31,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
-
         if nameField.text == ""{
             ViewUtils.showAlert(withController: self, title: "HATA!", message: "Lutfen isimi doldurunuz!")
         }else {
@@ -41,5 +41,15 @@ class HomeViewController: UIViewController {
         let vc = storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.questions = questions
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setSelected() {
+        for section in 0...questions.count - 1 {
+            for number in  0...questions[section].answers!.count - 1{
+                if questions[section].answers![number].isSelected {
+                    questions[section].answers![number].isSelected = false
+                }
+            }
+        }
     }
 }

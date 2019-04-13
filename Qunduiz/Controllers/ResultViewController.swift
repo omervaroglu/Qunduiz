@@ -24,8 +24,9 @@ class ResultViewController: UITableViewController {
     @objc func highScore() {
         scoreArray.append(score)
         UserDefaults.standard.set(scoreArray, forKey: "scoreArray")
-        let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController")
-        let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController")
+        let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController
+        let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        vc1.questions = questions
         navigationController?.setViewControllers([vc1,vc], animated: true) 
     }
     

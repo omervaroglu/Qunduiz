@@ -28,7 +28,7 @@ class HighScoreTableViewController: UITableViewController {
             print(scoreArray, nameArray)
         } 
     }
-    
+    //islevsiz
     @objc func backAction() {
         let vc = storyboard!.instantiateViewController(withIdentifier: "HomeViewController")
         navigationController?.setViewControllers([vc], animated: true)
