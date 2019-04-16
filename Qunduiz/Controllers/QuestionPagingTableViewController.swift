@@ -15,6 +15,7 @@ class QuestionPagingTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: UIBarButtonItem.Style.plain, target: self, action: #selector(nextQuestions))
     }
+
     @objc func nextQuestions() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "QuestionHeaderTableViewController") as! QuestionHeaderTableViewController
         vc.questions = questions

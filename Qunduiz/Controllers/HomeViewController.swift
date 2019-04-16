@@ -22,9 +22,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.topItem?.title = "Qunduiz"
-        setSelected()
     }
     override func viewWillAppear(_ animated: Bool) {
+        setSelected()
         if UserDefaults.standard.array(forKey: "nickname") != nil {
             self.storedName = UserDefaults.standard.array(forKey: "nickname") as! [String]
         }
