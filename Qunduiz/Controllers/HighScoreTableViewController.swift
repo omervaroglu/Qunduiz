@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class HighScoreTableViewController: UITableViewController {
-    var scoreArray: [Int] = [] {
+    var scoreArray: [Int16] = [] {
         didSet{
             tableView.reloadData()
         }
@@ -21,12 +22,13 @@ class HighScoreTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        if UserDefaults.standard.array(forKey: "scoreArray") != nil {
-            scoreArray = UserDefaults.standard.array(forKey: "scoreArray") as! [Int]
-            nameArray = UserDefaults.standard.array(forKey: "nickname") as! [String]
-            tableView.reloadData()
-            print(scoreArray, nameArray)
-        } 
+        getData()
+//        if UserDefaults.standard.array(forKey: "scoreArray") != nil {
+//            scoreArray = UserDefaults.standard.array(forKey: "scoreArray") as! [Int]
+//            nameArray = UserDefaults.standard.array(forKey: "nickname") as! [String]
+//            tableView.reloadData()
+//            print(scoreArray, nameArray)
+//        }
     }
     //islevsiz
     @objc func backAction() {
@@ -46,5 +48,31 @@ class HighScoreTableViewController: UITableViewController {
         cell.scoreNameLabel.text = nameArray[indexPath.row]
         cell.scoreLabel.text = "Score: \(String(scoreArray[indexPath.row]))"
         return cell
+    }
+    
+    func getData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Scores")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            
+            if results.count > 0 {
+                for result in results  as! [NSManagedObject]{
+                    if let name = result.value(forKey: "name") as? String {
+                        self.nameArray.append(name)
+                    }
+                    if let score = result.value(forKey: "score") as? Int16 {
+                        self.scoreArray.append(score)
+                    }
+                }
+            }
+        } catch  {
+            
+        }
+        
     }
 }
