@@ -10,8 +10,11 @@ import UIKit
 import CoreData
 
 class HighScoreTableViewController: UITableViewController {
-    var ScoreList : [Score] = [] {
+    var scoreList : [Score] = [] {
         didSet{
+            scoreList = scoreList.sorted { (s1, s2) -> Bool in
+                return s1.score > s2.score
+            }
             tableView.reloadData()
         }
     }
@@ -24,14 +27,14 @@ class HighScoreTableViewController: UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ScoreList.count
+        return scoreList.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell" )
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreCell", for: indexPath) as! HighScoreCell
         
-        cell.scoreNameLabel.text = ScoreList[indexPath.row].name
-        cell.scoreLabel.text = "Score: \(String(ScoreList[indexPath.row].score))"
+        cell.scoreNameLabel.text = scoreList[indexPath.row].name
+        cell.scoreLabel.text = "Score: \(String(scoreList[indexPath.row].score))"
         return cell
     }
     
@@ -45,7 +48,7 @@ class HighScoreTableViewController: UITableViewController {
         do {
             let results = try context.fetch(fetchRequest)
             if results.count > 0 {
-                self.ScoreList = results as! [NSManagedObject] as! [Score]
+                self.scoreList = results as! [NSManagedObject] as! [Score]
             }
         } catch  {
             
