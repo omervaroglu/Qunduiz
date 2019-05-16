@@ -23,11 +23,11 @@ class ResultViewController: UITableViewController {
     
     @objc func highScore() {
         scoreArray.append(score)
-        UserDefaults.standard.set(scoreArray, forKey: "scoreArray")
-        let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController
-        let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        vc1.questions = questions
-        navigationController?.setViewControllers([vc1,vc], animated: true) 
+        let vc = storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+        vc.questions = questions
+        vc.score = score
+        navigationController?.pushViewController(vc, animated: true)
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

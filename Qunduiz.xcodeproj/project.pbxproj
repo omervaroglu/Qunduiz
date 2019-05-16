@@ -40,6 +40,7 @@
 		17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */; };
 		17FABE0A225BA90C00029357 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FABE09225BA90C00029357 /* HighScoreCell.xib */; };
 		17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE0B225BAA4600029357 /* HighScoreCell.swift */; };
+		45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B55C8B228C10EA00412D34 /* NameViewController.swift */; };
 		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		2FF84C3A76EF7641A739403C /* Pods-Qunduiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.release.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.release.xcconfig"; sourceTree = "<group>"; };
 		38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qunduiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.debug.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.debug.xcconfig"; sourceTree = "<group>"; };
+		45B55C8B228C10EA00412D34 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				17B75E372260E7F60006C591 /* QuestionHeaderTableViewController.swift */,
 				17B75E392260EBDB0006C591 /* QuestionPagingTableViewController.swift */,
 				178087B522573FC4005B7888 /* ResultViewController.swift */,
+				45B55C8B228C10EA00412D34 /* NameViewController.swift */,
 				17FABE06225BA6BA00029357 /* HighScoreTableViewController.swift */,
 			);
 			path = Controllers;
@@ -342,6 +345,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Qunduiz/Pods-Qunduiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -350,6 +354,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -393,6 +398,7 @@
 				17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */,
 				17039A51225E276C00499736 /* ListTableViewController.swift in Sources */,
 				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
+				45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */,
 				176DEE2D2254916300B54B00 /* ViewController.swift in Sources */,
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
 				17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */,

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Qc-Wa-oYp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Qc-Wa-oYp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -184,6 +184,62 @@
             </objects>
             <point key="canvasLocation" x="3463" y="1424"/>
         </scene>
+        <!--Name View Controller-->
+        <scene sceneID="5ft-QZ-AgE">
+            <objects>
+                <viewController storyboardIdentifier="NameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="veD-yM-9Qx" customClass="NameViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GFg-Cd-BCI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skor tablosu için ismine ihtiyacım var" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXy-eY-duM">
+                                <rect key="frame" x="32" y="70" width="311" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İsim Gir" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wma-Mc-NSY">
+                                <rect key="frame" x="32" y="200" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7S-7h-9bA" customClass="CustomButton" customModule="Qunduiz" customModuleProvider="target">
+                                <rect key="frame" x="110" y="290" width="155" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QTu-Gx-4pi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="DEVAM">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAction:" destination="veD-yM-9Qx" eventType="touchUpInside" id="Iwb-0c-XD6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wma-Mc-NSY" firstAttribute="top" secondItem="XXy-eY-duM" secondAttribute="bottom" constant="60" id="2FT-XZ-VUO"/>
+                            <constraint firstItem="XXy-eY-duM" firstAttribute="leading" secondItem="LAc-2u-u9l" secondAttribute="leading" constant="32" id="CHm-nt-f8O"/>
+                            <constraint firstItem="p7S-7h-9bA" firstAttribute="leading" secondItem="LAc-2u-u9l" secondAttribute="leading" constant="110" id="CyH-H4-eZl"/>
+                            <constraint firstItem="p7S-7h-9bA" firstAttribute="top" secondItem="Wma-Mc-NSY" secondAttribute="bottom" constant="60" id="OA2-FK-Aq6"/>
+                            <constraint firstItem="LAc-2u-u9l" firstAttribute="trailing" secondItem="p7S-7h-9bA" secondAttribute="trailing" constant="110" id="TJq-Wc-aSB"/>
+                            <constraint firstItem="XXy-eY-duM" firstAttribute="top" secondItem="LAc-2u-u9l" secondAttribute="top" constant="50" id="doH-G4-H6y"/>
+                            <constraint firstItem="LAc-2u-u9l" firstAttribute="trailing" secondItem="XXy-eY-duM" secondAttribute="trailing" constant="32" id="l60-fk-erm"/>
+                            <constraint firstItem="Wma-Mc-NSY" firstAttribute="leading" secondItem="LAc-2u-u9l" secondAttribute="leading" constant="32" id="lVr-UR-r2L"/>
+                            <constraint firstItem="LAc-2u-u9l" firstAttribute="trailing" secondItem="Wma-Mc-NSY" secondAttribute="trailing" constant="32" id="t46-Z6-9ze"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LAc-2u-u9l"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="Wma-Mc-NSY" id="Xcd-f1-FIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfZ-eJ-v9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2517.5999999999999" y="2879.9100449775115"/>
+        </scene>
         <!--Question Paging Table View Controller-->
         <scene sceneID="me0-OA-kii">
             <objects>
@@ -220,13 +276,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Isim gir" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pqh-J1-BWX">
-                                <rect key="frame" x="50" y="120" width="275" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="nickname"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh0-Tc-nLH" customClass="CustomButton" customModule="Qunduiz" customModuleProvider="target">
                                 <rect key="frame" x="100" y="182" width="175" height="60"/>
                                 <color key="backgroundColor" red="0.63529411759999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -256,11 +305,8 @@
                             <constraint firstItem="BWo-ti-f9E" firstAttribute="trailing" secondItem="bh0-Tc-nLH" secondAttribute="trailing" id="AYM-Xa-CSR"/>
                             <constraint firstItem="BWo-ti-f9E" firstAttribute="top" secondItem="bh0-Tc-nLH" secondAttribute="bottom" constant="32" id="Dul-yj-Q67"/>
                             <constraint firstItem="BWo-ti-f9E" firstAttribute="leading" secondItem="bh0-Tc-nLH" secondAttribute="leading" id="M7U-fx-3xu"/>
-                            <constraint firstItem="RZR-Ep-Wms" firstAttribute="trailing" secondItem="pqh-J1-BWX" secondAttribute="trailing" constant="50" id="Nk3-qm-9WO"/>
-                            <constraint firstItem="bh0-Tc-nLH" firstAttribute="top" secondItem="pqh-J1-BWX" secondAttribute="bottom" constant="32" id="Nmc-Lv-mDF"/>
-                            <constraint firstItem="pqh-J1-BWX" firstAttribute="leading" secondItem="RZR-Ep-Wms" secondAttribute="leading" constant="50" id="Oec-HS-BYx"/>
                             <constraint firstItem="RZR-Ep-Wms" firstAttribute="trailing" secondItem="bh0-Tc-nLH" secondAttribute="trailing" constant="100" id="UB4-Aw-d5X"/>
-                            <constraint firstItem="pqh-J1-BWX" firstAttribute="top" secondItem="RZR-Ep-Wms" secondAttribute="top" constant="100" id="Y4V-2K-XF5"/>
+                            <constraint firstItem="bh0-Tc-nLH" firstAttribute="top" secondItem="RZR-Ep-Wms" secondAttribute="top" constant="162" id="bf5-2R-YNy"/>
                             <constraint firstItem="BWo-ti-f9E" firstAttribute="height" secondItem="bh0-Tc-nLH" secondAttribute="height" id="bju-Bi-uNJ"/>
                             <constraint firstItem="bh0-Tc-nLH" firstAttribute="leading" secondItem="RZR-Ep-Wms" secondAttribute="leading" constant="100" id="ufw-V5-bZ4"/>
                         </constraints>
@@ -268,7 +314,6 @@
                     </view>
                     <connections>
                         <outlet property="highScoreButton" destination="BWo-ti-f9E" id="aca-Pa-m3P"/>
-                        <outlet property="nameField" destination="pqh-J1-BWX" id="6Pv-IA-cfd"/>
                         <outlet property="startButton" destination="bh0-Tc-nLH" id="mTN-eS-ghJ"/>
                     </connections>
                 </viewController>
@@ -340,15 +385,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qunduiz Q&amp;A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y7-1H-p1L">
-                                <rect key="frame" x="110" y="280" width="155" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qunduiz Q&amp;A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y7-1H-p1L">
+                                <rect key="frame" x="110" y="280" width="155" height="81.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="35"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6y7-1H-p1L" firstAttribute="leading" secondItem="CPR-ey-gBB" secondAttribute="leading" constant="110" id="15r-jV-Ijm"/>
+                            <constraint firstItem="CPR-ey-gBB" firstAttribute="trailing" secondItem="6y7-1H-p1L" secondAttribute="trailing" constant="110" id="1Iv-8k-oc4"/>
+                            <constraint firstItem="6y7-1H-p1L" firstAttribute="top" secondItem="CPR-ey-gBB" secondAttribute="top" constant="216" id="4fG-ua-OmM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CPR-ey-gBB"/>
                     </view>
                     <navigationItem key="navigationItem" id="AQj-97-shR"/>

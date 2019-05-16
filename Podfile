@@ -9,5 +9,6 @@ target 'Qunduiz' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'ObjectMapper', '~> 3.4'
   pod 'PKHUD', '~> 5.1'
+  pod 'IQKeyboardManagerSwift'
 
 end

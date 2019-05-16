@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.isNavigationBarHidden = true
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(nextPage), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(nextPage), userInfo: nil, repeats: false)
     }
     
     @objc func nextPage(){
