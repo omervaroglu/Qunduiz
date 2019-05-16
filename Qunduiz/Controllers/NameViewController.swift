@@ -28,7 +28,7 @@ class NameViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let scores = NSEntityDescription.insertNewObject(forEntityName: "Scores", into: context)
+        let scores = NSEntityDescription.insertNewObject(forEntityName: "Score", into: context)
         
         scores.setValue(nameField.text, forKey: "name")
         scores.setValue(score, forKey: "score")
