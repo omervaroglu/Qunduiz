@@ -77,7 +77,6 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
             ViewUtils.showAlert(withController: self, title: "HATA!", message: "Lutfen gorunum seciniz.")
-
         }
     }
 }

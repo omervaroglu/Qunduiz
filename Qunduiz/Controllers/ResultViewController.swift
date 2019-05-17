@@ -16,18 +16,13 @@ class ResultViewController: UITableViewController {
     
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(highScore))
-        if UserDefaults.standard.array(forKey: "scoreArray") != nil {
-            scoreArray = UserDefaults.standard.array(forKey: "scoreArray") as! [Int]
-        }
     }
     
     @objc func highScore() {
-        scoreArray.append(score)
         let vc = storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
         vc.questions = questions
         vc.score = score
         navigationController?.pushViewController(vc, animated: true)
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
