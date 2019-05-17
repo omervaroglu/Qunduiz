@@ -18,13 +18,9 @@ class PagingTableViewController: UITableViewController {
             setSelected()
         }
     }
-    
-    var name: String = ""
-    var score: Int = 0
    
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(nextQuestions))
-
     }
     override func viewWillAppear(_ animated: Bool) {
         setSelected()
@@ -98,7 +94,7 @@ class PagingTableViewController: UITableViewController {
     }
     
     func setSelected() {
-        for number in  0...questions[self.index].answers!.count - 1{
+        for number in questions[self.index].answers!.indices {
             if questions[self.index].answers![number].isSelected {
                 questions[self.index].answers![number].isSelected = false
             }
@@ -107,12 +103,12 @@ class PagingTableViewController: UITableViewController {
     
     @objc func nextQuestions() {
         if self.index == questions.count - 1  {
-            self.index = 0
             let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
             let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             vc.questions = questions
             vc1.questions = questions
             self.navigationController?.setViewControllers([vc1, vc], animated: true)
+            self.index = 0
         } else {
             self.index = self.index + 1
         }

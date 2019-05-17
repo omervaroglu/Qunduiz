@@ -16,18 +16,13 @@ class ResultViewController: UITableViewController {
     
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(highScore))
-        if UserDefaults.standard.array(forKey: "scoreArray") != nil {
-            scoreArray = UserDefaults.standard.array(forKey: "scoreArray") as! [Int]
-        }
     }
     
     @objc func highScore() {
-        scoreArray.append(score)
         let vc = storyboard?.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
         vc.questions = questions
         vc.score = score
         navigationController?.pushViewController(vc, animated: true)
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,7 +37,6 @@ class ResultViewController: UITableViewController {
         if String(questions[indexPath.row].answers![indexPath.row].isSelected) == questions[indexPath.row].answers![indexPath.row].isTrue {
             score += 5
             cell.questionView.layer.borderColor = UIColor.green.cgColor
-            UserDefaults.standard.set("scoreArray", forKey: "scoreArray")
         } else {
             cell.questionView.layer.borderColor = UIColor.red.cgColor
         }

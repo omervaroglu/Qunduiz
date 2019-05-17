@@ -9,12 +9,11 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
-    var questions : [Questions] = []
     
+    var questions : [Questions] = []
     
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(finishedQuiz))
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,6 +38,8 @@ class ListTableViewController: UITableViewController {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = questions[section].soru
+        label.backgroundColor = .white
+        label.textAlignment = .center
         return label
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,20 +55,23 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            print(" Row \(indexPath.row) selected")
-            let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
+        print(" Row \(indexPath.row) selected")
+        let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
             
-            if questions[indexPath.section].answers![indexPath.row].isSelected {
+        if questions[indexPath.section].answers![indexPath.row].isSelected {
                 setSelected(indexpath: indexPath.section)
                 questions[indexPath.section].answers![indexPath.row].isSelected = false
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
                 print(questions[indexPath.section].answers![indexPath.row].isSelected)
-            } else {
+        } else {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
                 setSelected(indexpath: indexPath.section)
                 questions[indexPath.section].answers![indexPath.row].isSelected = true
                 print(questions[indexPath.section].answers![indexPath.row].isSelected)
-            }
+        }
+        if indexPath.section < questions.count - 1 {
+        self.tableView.scrollToRow(at: IndexPath(row: 0, section: indexPath.section + 1  ) , at: .top, animated: true)
+        }
         self.tableView.reloadData()
     }
 
