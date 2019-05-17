@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		17039A51225E276C00499736 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17039A50225E276C00499736 /* ListTableViewController.swift */; };
 		176DEE2B2254916300B54B00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE2A2254916300B54B00 /* AppDelegate.swift */; };
-		176DEE2D2254916300B54B00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE2C2254916300B54B00 /* ViewController.swift */; };
 		176DEE302254916300B54B00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE2E2254916300B54B00 /* Main.storyboard */; };
 		176DEE332254916300B54B00 /* Qunduiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 176DEE312254916300B54B00 /* Qunduiz.xcdatamodeld */; };
 		176DEE352254916500B54B00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176DEE342254916500B54B00 /* Assets.xcassets */; };
@@ -41,6 +40,7 @@
 		17FABE0A225BA90C00029357 /* HighScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FABE09225BA90C00029357 /* HighScoreCell.xib */; };
 		17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE0B225BAA4600029357 /* HighScoreCell.swift */; };
 		45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B55C8B228C10EA00412D34 /* NameViewController.swift */; };
+		45C08A3C228EE6E300E86BE0 /* TypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */; };
 		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,6 @@
 		17039A50225E276C00499736 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		176DEE272254916300B54B00 /* Qunduiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qunduiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176DEE2A2254916300B54B00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		176DEE2C2254916300B54B00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		176DEE2F2254916300B54B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		176DEE322254916300B54B00 /* Qunduiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Qunduiz.xcdatamodel; sourceTree = "<group>"; };
 		176DEE342254916500B54B00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qunduiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.debug.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.debug.xcconfig"; sourceTree = "<group>"; };
 		45B55C8B228C10EA00412D34 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,7 @@
 				176DEE5C2254C71500B54B00 /* CustomControllers */,
 				176DEE4E2254991B00B54B00 /* SplashViewController.swift */,
 				17FABE042258FFFA00029357 /* HomeViewController.swift */,
-				176DEE2C2254916300B54B00 /* ViewController.swift */,
+				45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */,
 				176DEE622254F00900B54B00 /* PagingTableViewController.swift */,
 				17039A50225E276C00499736 /* ListTableViewController.swift */,
 				17B75E372260E7F60006C591 /* QuestionHeaderTableViewController.swift */,
@@ -399,13 +399,13 @@
 				17039A51225E276C00499736 /* ListTableViewController.swift in Sources */,
 				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
 				45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */,
-				176DEE2D2254916300B54B00 /* ViewController.swift in Sources */,
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
 				17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */,
 				176DEE582254A8F100B54B00 /* QuestionList.swift in Sources */,
 				176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */,
 				176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */,
 				17B75E382260E7F60006C591 /* QuestionHeaderTableViewController.swift in Sources */,
+				45C08A3C228EE6E300E86BE0 /* TypeTableViewController.swift in Sources */,
 				176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */,
 				17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */,
 				176DEE332254916300B54B00 /* Qunduiz.xcdatamodeld in Sources */,

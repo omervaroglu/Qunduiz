@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
-        let vc = storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let vc = storyboard!.instantiateViewController(withIdentifier: "TypeTableViewController") as! TypeTableViewController
         vc.questions = questions
         self.navigationController?.pushViewController(vc, animated: true)
     }
