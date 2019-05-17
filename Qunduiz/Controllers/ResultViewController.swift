@@ -37,7 +37,6 @@ class ResultViewController: UITableViewController {
         if String(questions[indexPath.row].answers![indexPath.row].isSelected) == questions[indexPath.row].answers![indexPath.row].isTrue {
             score += 5
             cell.questionView.layer.borderColor = UIColor.green.cgColor
-            UserDefaults.standard.set("scoreArray", forKey: "scoreArray")
         } else {
             cell.questionView.layer.borderColor = UIColor.red.cgColor
         }
