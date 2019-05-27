@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class PagingTableViewController: UITableViewController {
     var questions : [Questions] = []
-    var index : Int = 0{
+    var index : Int = 0 {
         didSet{
             tableView.reloadData()
             setSelected()

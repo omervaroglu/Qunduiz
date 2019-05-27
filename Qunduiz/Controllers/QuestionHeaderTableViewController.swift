@@ -32,6 +32,13 @@ class QuestionHeaderTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell" )
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         cell.questionLabel.text = " soru \(indexPath.row + 1)"
+        
+        if questions[indexPath.row].answers![indexPath.row].isSelected {
+            cell.questionView.layer.borderColor = UIColor.cyan.cgColor
+        }else {
+            cell.questionView.layer.borderColor = UIColor.orange.cgColor
+        }
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
