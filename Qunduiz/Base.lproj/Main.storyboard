@@ -483,17 +483,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qunduiz Q&amp;A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y7-1H-p1L">
-                                <rect key="frame" x="110" y="280" width="155" height="81.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="35"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="110" y="407" width="155" height="112"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beaver" translatesAutoresizingMaskIntoConstraints="NO" id="czW-g8-kew">
+                                <rect key="frame" x="64" y="128" width="247" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="czW-g8-kew" secondAttribute="height" multiplier="1:1" id="haG-kO-4xi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.59775453805923462" green="0.88647693395614624" blue="0.92942184209823608" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6y7-1H-p1L" firstAttribute="leading" secondItem="CPR-ey-gBB" secondAttribute="leading" constant="110" id="15r-jV-Ijm"/>
                             <constraint firstItem="CPR-ey-gBB" firstAttribute="trailing" secondItem="6y7-1H-p1L" secondAttribute="trailing" constant="110" id="1Iv-8k-oc4"/>
-                            <constraint firstItem="6y7-1H-p1L" firstAttribute="top" secondItem="CPR-ey-gBB" secondAttribute="top" constant="216" id="4fG-ua-OmM"/>
+                            <constraint firstItem="czW-g8-kew" firstAttribute="top" secondItem="CPR-ey-gBB" secondAttribute="top" constant="64" id="Mcm-yo-3iR"/>
+                            <constraint firstItem="6y7-1H-p1L" firstAttribute="top" secondItem="czW-g8-kew" secondAttribute="bottom" constant="32" id="Njp-nm-Qp1"/>
+                            <constraint firstItem="CPR-ey-gBB" firstAttribute="trailing" secondItem="czW-g8-kew" secondAttribute="trailing" constant="64" id="QEO-Hc-Zw1"/>
+                            <constraint firstItem="czW-g8-kew" firstAttribute="leading" secondItem="CPR-ey-gBB" secondAttribute="leading" constant="64" id="oqg-Fe-78n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CPR-ey-gBB"/>
                     </view>
@@ -554,5 +562,6 @@
         <image name="001-checklist" width="256" height="256"/>
         <image name="002-menu" width="256" height="256"/>
         <image name="003-list" width="256" height="256"/>
+        <image name="beaver" width="256" height="256"/>
     </resources>
 </document>

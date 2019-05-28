@@ -18,18 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beaver" translatesAutoresizingMaskIntoConstraints="NO" id="bMr-tn-jRb">
+                                <rect key="frame" x="64" y="84" width="247" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bMr-tn-jRb" secondAttribute="height" multiplier="1:1" id="XIV-QR-cEV"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qunduiz Q&amp;A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZB-A2-99R">
-                                <rect key="frame" x="110" y="236" width="155" height="81.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="35"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="110" y="363" width="155" height="112"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.59775453805923462" green="0.88647693395614624" blue="0.92942184209823608" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bMr-tn-jRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="ATi-GJ-wdk"/>
                             <constraint firstItem="jZB-A2-99R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="NUX-pP-yhy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bMr-tn-jRb" secondAttribute="trailing" constant="64" id="aD0-j2-arH"/>
+                            <constraint firstItem="bMr-tn-jRb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="gJz-XM-3gV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZB-A2-99R" secondAttribute="trailing" constant="110" id="l3D-rN-ou6"/>
-                            <constraint firstItem="jZB-A2-99R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="216" id="pAW-VB-uHg"/>
+                            <constraint firstItem="jZB-A2-99R" firstAttribute="top" secondItem="bMr-tn-jRb" secondAttribute="bottom" constant="32" id="uBJ-VW-oFu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,4 +47,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beaver" width="256" height="256"/>
+    </resources>
 </document>
