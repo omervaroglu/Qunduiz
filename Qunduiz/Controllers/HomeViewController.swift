@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.topItem?.title = "Qunduiz"
+        self.navigationItem.title = "Qunduiz"
     }
     override func viewWillAppear(_ animated: Bool) {
         setSelected()
@@ -34,9 +34,9 @@ class HomeViewController: UIViewController {
     
     func setSelected() {
         for section in questions.indices {
-            for number in  questions[section].answers!.indices{
-                if questions[section].answers![number].isSelected {
-                    questions[section].answers![number].isSelected = false
+            for number in  questions[section].answers.indices{
+                if questions[section].answers[number].isSelected {
+                    questions[section].answers[number].isSelected = false
                 }
             }
         }

@@ -1,7 +1,7 @@
 {
     "Questions":[
         {
-            "soru":"Hangisi bir hayvandir?",
+            "soru":"Hangisi bir hayvandır?",
             "id":"1",
             "time":"5",
             "type":"hayvanlar",
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "soru":"pi sayisi hangisidir?",
+            "soru":"Pi sayısı hangisidir?",
             "id":"2",
             "time":"5",
             "type":"matematik",
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "soru":"istanbul Fatih Sultan Mehmet Tarafindan kac yilinda fethedilmistir?",
+            "soru":"İstanbul Fatih Sultan Mehmet tarafından kaç yılında fethedilmiştir?",
             "id":"3",
             "time":"5",
             "type":"tarih",

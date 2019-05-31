@@ -34,7 +34,7 @@ class ResultViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell" )
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-        if String(questions[indexPath.row].answers![indexPath.row].isSelected) == questions[indexPath.row].answers![indexPath.row].isTrue {
+        if String(questions[indexPath.row].answers[indexPath.row].isSelected) == questions[indexPath.row].answers[indexPath.row].isTrue {
             score += 5
             cell.questionView.layer.borderColor = UIColor.green.cgColor
         } else {

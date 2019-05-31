@@ -15,11 +15,11 @@ import Foundation
 import ObjectMapper
 
 struct Questions : Mappable {
-	var soru : String?
-	var id : String?
-	var time : String?
-	var type : String?
-	var answers : [Answers]?
+	var soru : String = ""
+	var id : String = ""
+	var time : String = ""
+	var type : String = ""
+	var answers : [Answers] = []
 
 	init?(map: Map) {
 

@@ -25,7 +25,7 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions[section].answers?.count ?? 0
+        return questions[section].answers.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -45,8 +45,8 @@ class ListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             tableView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell" )
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath) as! AnswerCell
-            cell.answerLabel.text = questions[indexPath.section].answers![indexPath.row].name
-            if questions[indexPath.section].answers![indexPath.row].isSelected {
+        cell.answerLabel.text = questions[indexPath.section].answers[indexPath.row].name
+        if questions[indexPath.section].answers[indexPath.row].isSelected {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
             }else {
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
@@ -58,16 +58,16 @@ class ListTableViewController: UITableViewController {
         print(" Row \(indexPath.row) selected")
         let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
             
-        if questions[indexPath.section].answers![indexPath.row].isSelected {
+        if questions[indexPath.section].answers[indexPath.row].isSelected {
                 setSelected(indexpath: indexPath.section)
-                questions[indexPath.section].answers![indexPath.row].isSelected = false
+            questions[indexPath.section].answers[indexPath.row].isSelected = false
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
-                print(questions[indexPath.section].answers![indexPath.row].isSelected)
+            print(questions[indexPath.section].answers[indexPath.row].isSelected)
         } else {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
                 setSelected(indexpath: indexPath.section)
-                questions[indexPath.section].answers![indexPath.row].isSelected = true
-                print(questions[indexPath.section].answers![indexPath.row].isSelected)
+            questions[indexPath.section].answers[indexPath.row].isSelected = true
+            print(questions[indexPath.section].answers[indexPath.row].isSelected)
         }
         if indexPath.section < questions.count - 1 {
         self.tableView.scrollToRow(at: IndexPath(row: 0, section: indexPath.section + 1  ) , at: .top, animated: true)
@@ -76,9 +76,9 @@ class ListTableViewController: UITableViewController {
     }
 
     func setSelected(indexpath: Int) {
-        for number in  0...questions[indexpath].answers!.count - 1{
-            if questions[indexpath].answers![number].isSelected {
-                questions[indexpath].answers![number].isSelected = false
+        for number in  0...questions[indexpath].answers.count - 1{
+            if questions[indexpath].answers[number].isSelected {
+                questions[indexpath].answers[number].isSelected = false
             }
         }
     }

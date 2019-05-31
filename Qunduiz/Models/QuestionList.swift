@@ -15,7 +15,7 @@ import Foundation
 import ObjectMapper
 
 struct QuestionList : Mappable {
-	var questions : [Questions]?
+    var questions : [Questions] = []
 
 	init?(map: Map) {
 

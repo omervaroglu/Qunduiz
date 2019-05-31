@@ -14,12 +14,22 @@ class QuestionHeaderTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
     }
+    
     @objc func finishedQuiz () {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         vc.questions = questions
         vc1.questions = questions
         self.navigationController?.setViewControllers([vc1, vc], animated: true)
+    }
+    
+    func isAnsweredQuestion(q: Questions)->Bool{
+        for answer in q.answers {
+            if answer.isSelected {
+                return true
+            }
+        }
+        return false
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,7 +43,7 @@ class QuestionHeaderTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         cell.questionLabel.text = " soru \(indexPath.row + 1)"
         
-        if questions[indexPath.row].answers![indexPath.row].isSelected {
+        if isAnsweredQuestion(q: questions[indexPath.row]) {
             cell.questionView.layer.borderColor = UIColor.cyan.cgColor
         }else {
             cell.questionView.layer.borderColor = UIColor.orange.cgColor

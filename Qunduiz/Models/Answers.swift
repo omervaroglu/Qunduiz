@@ -15,8 +15,8 @@ import Foundation
 import ObjectMapper
 
 struct Answers : Mappable {
-	var name : String?
-	var isTrue : String?
+	var name : String = ""
+	var isTrue : String = ""
     var isSelected : Bool = false
     
 	init?(map: Map) {

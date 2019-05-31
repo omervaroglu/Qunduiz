@@ -30,7 +30,7 @@ class QuestionPagingTableViewController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return questions[section].answers?.count ?? 0
+            return questions[section].answers.count ?? 0
         default:
             return 0
         }
@@ -45,8 +45,8 @@ class QuestionPagingTableViewController: UITableViewController {
         case 1:
             tableView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell" )
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath) as! AnswerCell
-            cell.answerLabel.text = questions[indexNumber].answers![indexPath.row].name
-            if questions[indexNumber].answers![indexPath.row].isSelected {
+            cell.answerLabel.text = questions[indexNumber].answers[indexPath.row].name
+            if questions[indexNumber].answers[indexPath.row].isSelected {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
             }else {
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
@@ -63,16 +63,16 @@ class QuestionPagingTableViewController: UITableViewController {
             print("Row \(indexPath.row) selected")
             let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
             
-            if questions[indexNumber].answers![indexPath.row].isSelected {
+            if questions[indexNumber].answers[indexPath.row].isSelected {
                 setSelected()
-                questions[indexNumber].answers![indexPath.row].isSelected = false
+                questions[indexNumber].answers[indexPath.row].isSelected = false
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
-                print(questions[indexNumber].answers![indexPath.row].isSelected)
+                print(questions[indexNumber].answers[indexPath.row].isSelected)
             } else {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
                 setSelected()
-                questions[indexNumber].answers![indexPath.row].isSelected = true
-                print(questions[indexNumber].answers![indexPath.row].isSelected)
+                questions[indexNumber].answers[indexPath.row].isSelected = true
+                print(questions[indexNumber].answers[indexPath.row].isSelected)
             }
         default:
             break
@@ -80,9 +80,9 @@ class QuestionPagingTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     func setSelected() {
-        for number in  0...questions[indexNumber].answers!.count - 1{
-            if questions[indexNumber].answers![number].isSelected {
-                questions[indexNumber].answers![number].isSelected = false
+        for number in  0...questions[indexNumber].answers.count - 1{
+            if questions[indexNumber].answers[number].isSelected {
+                questions[indexNumber].answers[number].isSelected = false
             }
         }
     }    
