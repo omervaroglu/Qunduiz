@@ -59,6 +59,66 @@
                     "isTrue":"true"
                 }
             ]
+        },
+        {
+            "soru":"Hangisi bir fizikçidir?",
+            "id":"4",
+            "time":"5",
+            "type":"tarih",
+            "answers":[
+                {
+                    "name":"Albert Einstein",
+                    "isTrue":"true"
+                },
+                {
+                    "name":"William Shakespeare",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"Cengiz Han",
+                    "isTrue":"false"
+                }
+            ]
+        },
+        {
+            "soru":"Hangisi bir başkettir?",
+            "id":"4",
+            "time":"5",
+            "type":"tarih",
+            "answers":[
+                {
+                    "name":"Paris",
+                    "isTrue":"true"
+                },
+                {
+                    "name":"Barcelona",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"Malatya",
+                    "isTrue":"false"
+                }
+            ]
+        },
+        {
+            "soru":"Yüz ölçümü en büyük olan ülke hangisidir?",
+            "id":"4",
+            "time":"5",
+            "type":"tarih",
+            "answers":[
+                {
+                    "name":"Rusya",
+                    "isTrue":"true"
+                },
+                {
+                    "name":"Çin",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"Amerika Birleşik Devletleri",
+                    "isTrue":"false"
+                }
+            ]
         }
 
     ]
