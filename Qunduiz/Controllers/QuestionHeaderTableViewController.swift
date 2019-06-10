@@ -12,6 +12,7 @@ class QuestionHeaderTableViewController: UITableViewController {
     var questions : [Questions] = []
     
     override func viewDidLoad() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
     }
     

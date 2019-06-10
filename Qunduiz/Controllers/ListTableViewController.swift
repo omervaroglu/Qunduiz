@@ -13,6 +13,7 @@ class ListTableViewController: UITableViewController {
     var questions : [Questions] = []
     
     override func viewDidLoad() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(finishedQuiz))
     }
     
@@ -25,7 +26,7 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions[section].answers.count ?? 0
+        return questions[section].answers.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -35,12 +36,18 @@ class ListTableViewController: UITableViewController {
         return 60
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
+        let containerView = UIView()
+        let view = UIView(frame: CGRect(x: 8, y: 4, width: tableView.frame.width, height: 2))
+        let label = UILabel(frame: CGRect(x: 8, y: 10, width: tableView.frame.width, height: 50))
         label.numberOfLines = 0
         label.text = questions[section].soru
-        label.backgroundColor = .white
+        label.textColor = .black
         label.textAlignment = .center
-        return label
+        label.backgroundColor = .white
+        view.backgroundColor = .gray
+        containerView.addSubview(label)
+        containerView.addSubview(view)
+        return containerView
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             tableView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell" )

@@ -20,6 +20,7 @@ class PagingTableViewController: UITableViewController {
     }
    
     override func viewDidLoad() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(nextQuestions))
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +35,7 @@ class PagingTableViewController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return questions[self.index].answers.count ?? 0
+            return questions[self.index].answers.count
         default:
             return 0
         }
@@ -112,5 +113,14 @@ class PagingTableViewController: UITableViewController {
         } else {
             self.index = self.index + 1
         }
+    }
+    
+    @objc func quitQuiz() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        vc.questions = questions
+        vc1.questions = questions
+        self.navigationController?.setViewControllers([vc1, vc], animated: true)
+        self.index = 0
     }
 }

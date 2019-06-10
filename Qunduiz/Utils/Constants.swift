@@ -29,4 +29,5 @@ import UIKit
             "udid": Constants.udid,
         ]
     }
+    static var scoreList : [Score] = []
 }

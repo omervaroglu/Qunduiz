@@ -15,6 +15,8 @@ class NameViewController: UIViewController {
     var questions : [Questions] = []
     var score  = 0
     
+    var scoreList : [Score] = [] 
+    
     @IBAction func buttonAction(_ sender: Any) {
         if nameField.text == "" {
             ViewUtils.showAlert(withController: self, title: "Hata", message: "İsim bölümü boş bırakılamaz.")
@@ -43,5 +45,23 @@ class NameViewController: UIViewController {
             print("CoreData Error")
         }
         
+    }
+    
+    func getData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Score")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if results.count > 0 {
+                self.scoreList = results as! [NSManagedObject] as! [Score]
+            }
+
+        } catch  {
+            
+        }
     }
 }

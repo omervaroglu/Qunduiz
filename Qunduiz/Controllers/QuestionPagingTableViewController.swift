@@ -30,7 +30,7 @@ class QuestionPagingTableViewController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return questions[section].answers.count ?? 0
+            return questions[section].answers.count
         default:
             return 0
         }

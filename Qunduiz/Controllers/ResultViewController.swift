@@ -15,6 +15,7 @@ class ResultViewController: UITableViewController {
     var scoreArray : [Int] = []
     
     override func viewDidLoad() {
+        self.navigationItem.title = "Cevapların"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(highScore))
     }
     
