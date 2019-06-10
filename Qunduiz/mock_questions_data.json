@@ -7,15 +7,19 @@
             "type":"hayvanlar",
             "answers":[
                 {
-                    "name":"kunduz",
+                    "name":"Kunduz",
                     "isTrue":"true"
                 },
                 {
-                    "name":"cetvel",
+                    "name":"Cetvel",
                     "isTrue":"false"
                 },
                 {
-                    "name":"patlican",
+                    "name":"Patlican",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"Telefon",
                     "isTrue":"false"
                 }
             ]
@@ -37,6 +41,10 @@
                 {
                     "name":"2,58",
                     "isTrue":"false"
+                },
+                {
+                    "name":"2.89",
+                    "isTrue":"false"
                 }
             ]
         },
@@ -57,6 +65,10 @@
                 {
                     "name":"1453",
                     "isTrue":"true"
+                },
+                {
+                    "name":"1654",
+                    "isTrue":"false"
                 }
             ]
         },
@@ -67,8 +79,8 @@
             "type":"tarih",
             "answers":[
                 {
-                    "name":"Albert Einstein",
-                    "isTrue":"true"
+                    "name":"Benjamin Franklin",
+                    "isTrue":"false"
                 },
                 {
                     "name":"William Shakespeare",
@@ -77,6 +89,10 @@
                 {
                     "name":"Cengiz Han",
                     "isTrue":"false"
+                },
+                {
+                    "name":"Albert Einstein",
+                    "isTrue":"true"
                 }
             ]
         },
@@ -92,6 +108,10 @@
                 },
                 {
                     "name":"Barcelona",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"Selanik",
                     "isTrue":"false"
                 },
                 {
@@ -116,6 +136,10 @@
                 },
                 {
                     "name":"Amerika Birleşik Devletleri",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"Uganda",
                     "isTrue":"false"
                 }
             ]

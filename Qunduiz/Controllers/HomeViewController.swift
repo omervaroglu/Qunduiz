@@ -33,8 +33,8 @@ class HomeViewController: UIViewController {
     }
     
     func setSelected() {
-        for section in questions.indices {
-            for number in  questions[section].answers.indices{
+        for section in 0...questions.count - 1 {
+            for number in 0...questions[section].answers.count - 1 {
                 if questions[section].answers[number].isSelected {
                     questions[section].answers[number].isSelected = false
                 }
