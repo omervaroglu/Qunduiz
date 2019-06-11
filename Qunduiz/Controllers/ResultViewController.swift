@@ -32,16 +32,51 @@ class ResultViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return questions.count
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell" )
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-        if String(questions[indexPath.row].answers[indexPath.section].isSelected) == questions[indexPath.row].answers[indexPath.section].isTrue {
+        tableView.register(UINib(nibName: "ResultCell", bundle: nil), forCellReuseIdentifier: "ResultCell" )
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
+        if resultTest(answers: questions[indexPath.row].answers) == true {
             score += 5
-            cell.questionView.layer.borderColor = UIColor.green.cgColor
+            cell.resultView.layer.borderColor = UIColor.green.cgColor
+            cell.trueAnswerLabel.textColor = .green
+            cell.yourAnswerLabel.textColor = .green
+        } else if resultTest(answers: questions[indexPath.row].answers) == nil {
+            cell.resultView.layer.borderColor = UIColor.gray.cgColor
         } else {
-            cell.questionView.layer.borderColor = UIColor.red.cgColor
+            cell.resultView.layer.borderColor = UIColor.red.cgColor
+            cell.yourAnswerLabel.textColor = .red
+            cell.trueAnswerLabel.textColor = .green
         }
+
         cell.questionLabel.text = questions[indexPath.row].soru
+        yourAnswer(answers: questions[indexPath.row].answers, yourlabel: cell.yourAnswerLabel, truelabel: cell.trueAnswerLabel)
+
         return cell
+    }
+    
+    func resultTest(answers : [Answers] ) -> Bool? {
+        for answer in answers {
+            if answer.isSelected {
+                if answer.isTrue == "true" {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
+        return nil
+    }
+    func yourAnswer (answers : [Answers], yourlabel: UILabel, truelabel: UILabel ){
+        for answer in answers {
+            if answer.isSelected {
+                yourlabel.text = answer.name
+            }
+            if answer.isTrue == "true" {
+                truelabel.text = answer.name
+            }
+        }
     }
 }
