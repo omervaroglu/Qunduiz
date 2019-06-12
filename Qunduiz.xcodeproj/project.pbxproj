@@ -41,6 +41,8 @@
 		17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FABE0B225BAA4600029357 /* HighScoreCell.swift */; };
 		451D57D022AF8BF800C2F395 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451D57CF22AF8BF800C2F395 /* ResultCell.xib */; };
 		451D57D222AF8E0300C2F395 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D57D122AF8E0300C2F395 /* ResultCell.swift */; };
+		451D57D522B0E52600C2F395 /* BestScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451D57D422B0E52600C2F395 /* BestScoreCell.xib */; };
+		451D57D722B0E6B000C2F395 /* BestScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D57D622B0E6B000C2F395 /* BestScoreCell.swift */; };
 		45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B55C8B228C10EA00412D34 /* NameViewController.swift */; };
 		45C08A3C228EE6E300E86BE0 /* TypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */; };
 		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
@@ -86,6 +88,8 @@
 		3B0D6EB27350DB0BBC392C4E /* Pods-Qunduiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qunduiz.debug.xcconfig"; path = "Target Support Files/Pods-Qunduiz/Pods-Qunduiz.debug.xcconfig"; sourceTree = "<group>"; };
 		451D57CF22AF8BF800C2F395 /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
 		451D57D122AF8E0300C2F395 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		451D57D422B0E52600C2F395 /* BestScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestScoreCell.xib; sourceTree = "<group>"; };
+		451D57D622B0E6B000C2F395 /* BestScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScoreCell.swift; sourceTree = "<group>"; };
 		45B55C8B228C10EA00412D34 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +216,7 @@
 				176DEE642254F18B00B54B00 /* QuestionCell */,
 				176DEE692254F36100B54B00 /* AnswerCell */,
 				451D57CE22AF8BC600C2F395 /* ResultCell */,
+				451D57D322B0E4D800C2F395 /* BestScoreCell */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -275,6 +280,15 @@
 				451D57D122AF8E0300C2F395 /* ResultCell.swift */,
 			);
 			path = ResultCell;
+			sourceTree = "<group>";
+		};
+		451D57D322B0E4D800C2F395 /* BestScoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				451D57D422B0E52600C2F395 /* BestScoreCell.xib */,
+				451D57D622B0E6B000C2F395 /* BestScoreCell.swift */,
+			);
+			path = BestScoreCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +355,7 @@
 				176DEE6D2254F3D700B54B00 /* AnswerCell.xib in Resources */,
 				17FABE0A225BA90C00029357 /* HighScoreCell.xib in Resources */,
 				176DEE352254916500B54B00 /* Assets.xcassets in Resources */,
+				451D57D522B0E52600C2F395 /* BestScoreCell.xib in Resources */,
 				176DEE682254F26400B54B00 /* QuestionCell.xib in Resources */,
 				176DEE5122549C5100B54B00 /* mock_questions_data.json in Resources */,
 				451D57D022AF8BF800C2F395 /* ResultCell.xib in Resources */,
@@ -412,6 +427,7 @@
 				176DEE4B2254970000B54B00 /* NetworkManager.swift in Sources */,
 				17FABE07225BA6BA00029357 /* HighScoreTableViewController.swift in Sources */,
 				17039A51225E276C00499736 /* ListTableViewController.swift in Sources */,
+				451D57D722B0E6B000C2F395 /* BestScoreCell.swift in Sources */,
 				176DEE4A2254970000B54B00 /* Utils.swift in Sources */,
 				45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */,
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,

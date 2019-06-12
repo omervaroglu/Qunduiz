@@ -76,12 +76,15 @@ class ListTableViewController: UITableViewController {
             questions[indexPath.section].answers[indexPath.row].isSelected = true
             print(questions[indexPath.section].answers[indexPath.row].isSelected)
         }
-        if indexPath.section < questions.count - 1 {
-        self.tableView.scrollToRow(at: IndexPath(row: 0, section: indexPath.section + 1  ) , at: .top, animated: true)
-        }
-        self.tableView.reloadData()
-    }
+        //sorular arasinda scroll kullanmak icin gerekli olanlar...
+//        if indexPath.section < questions.count - 1 {
+//            //self.tableView.scrollToRow(at: IndexPath(row: 0, section: indexPath.section + 1  ) , at: .bottom, animated: true)
+//            self.tableView.reloadData()
+//
+//        }
 
+    }
+    
     func setSelected(indexpath: Int) {
         for number in  0...questions[indexpath].answers.count - 1{
             if questions[indexpath].answers[number].isSelected {
