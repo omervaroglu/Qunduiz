@@ -9,8 +9,8 @@
 import UIKit
 
 class BestScoreCell: UITableViewCell {
-    @IBOutlet weak var bestScoreView: UIView!
     
+    @IBOutlet weak var bestScoreView: UIView!
     @IBOutlet weak var bestScoreNameLabel: UILabel!
     @IBOutlet weak var bestScoreScoreCell: UILabel!
     

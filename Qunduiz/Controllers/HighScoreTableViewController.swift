@@ -21,46 +21,34 @@ class HighScoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         getData()
+        //tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        default:
-            return scoreList.count-1
-        }
+        return scoreList.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 200
-        default:
-            return 80
-        }
+        return UITableView.automaticDimension
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
-        switch indexPath.section {
-            case 0:
+            if indexPath.row == 0 {
                 tableView.register(UINib(nibName: "BestScoreCell", bundle: nil), forCellReuseIdentifier: "BestScoreCell" )
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BestScoreCell", for: indexPath) as! BestScoreCell
-                cell.bestScoreNameLabel.text = scoreList[0].name
-                cell.bestScoreScoreCell.text = "Score: \(String(scoreList[0].score))"
-                return cell
-            default:
+                let bestCell = tableView.dequeueReusableCell(withIdentifier: "BestScoreCell", for: indexPath) as! BestScoreCell
+                bestCell.bestScoreNameLabel.text = scoreList[0].name
+                bestCell.bestScoreScoreCell.text = "Score: \(String(scoreList[0].score))"
+                return bestCell
+            } else {
                 tableView.register(UINib(nibName: "HighScoreCell", bundle: nil), forCellReuseIdentifier: "HighScoreCell" )
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreCell", for: indexPath) as! HighScoreCell
-//                if indexPath.row != 0 {
-//
-//                }
-                cell.scoreNameLabel.text = scoreList[indexPath.row + 1].name
-                cell.scoreLabel.text = "Score: \(String(scoreList[indexPath.row + 1].score))"
+                cell.scoreNameLabel.text = scoreList[indexPath.row].name
+                cell.scoreLabel.text = "Score: \(String(scoreList[indexPath.row].score))"
                 return cell
-        }
+            }
     }
     
     func getData() {
