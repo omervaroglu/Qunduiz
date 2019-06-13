@@ -17,6 +17,7 @@ class ResultViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.title = "Cevapların"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(highScore))
+        score = calculateScore(questions: questions)
     }
     
     @objc func highScore() {
@@ -39,18 +40,17 @@ class ResultViewController: UITableViewController {
         tableView.register(UINib(nibName: "ResultCell", bundle: nil), forCellReuseIdentifier: "ResultCell" )
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
         if resultTest(answers: questions[indexPath.row].answers) == true {
-            score += 5
+            //score += 5
             cell.resultView.layer.borderColor = UIColor.green.cgColor
             cell.trueAnswerLabel.textColor = .green
             cell.yourAnswerLabel.textColor = .green
         } else if resultTest(answers: questions[indexPath.row].answers) == nil {
             cell.resultView.layer.borderColor = UIColor.gray.cgColor
         } else {
-            cell.resultView.layer.borderColor = UIColor.red.cgColor
-            cell.yourAnswerLabel.textColor = .red
-            cell.trueAnswerLabel.textColor = .green
+           cell.resultView.layer.borderColor = UIColor.red.cgColor
+           cell.yourAnswerLabel.textColor = .red
+           cell.trueAnswerLabel.textColor = .green
         }
-
         cell.questionLabel.text = questions[indexPath.row].soru
         yourAnswer(answers: questions[indexPath.row].answers, yourlabel: cell.yourAnswerLabel, truelabel: cell.trueAnswerLabel)
 
@@ -78,5 +78,15 @@ class ResultViewController: UITableViewController {
                 truelabel.text = answer.name
             }
         }
+    }
+    func calculateScore (questions : [Questions]) -> Int {
+        for question in questions {
+            for answer in question.answers {
+                if answer.isSelected && answer.isTrue == "true"{
+                    score += 5
+                }
+            }
+        }
+        return score
     }
 }

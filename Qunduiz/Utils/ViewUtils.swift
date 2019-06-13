@@ -22,4 +22,5 @@ class ViewUtils {
         viewController.present(alertController, animated: true, completion:nil)
     }
     //ViewUtils.showAlert(withController: self, title: "Uyarı", message: "hata mesaji buraya")
+    
 }

@@ -18,7 +18,7 @@ class TypeTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.title = "Görünümünü Seç"
+        self.navigationItem.title = "Görünümünler"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: UIBarButtonItem.Style.plain, target: self, action: #selector(startQuiz))
     }
     override func viewDidAppear(_ animated: Bool) {
