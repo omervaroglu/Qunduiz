@@ -11,9 +11,9 @@ import UIKit
 class ListTableViewController: UITableViewController {
     
     var questions : [Questions] = []
-    
+
     override func viewDidLoad() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(finishedQuiz))
     }
     
@@ -83,13 +83,17 @@ class ListTableViewController: UITableViewController {
         }
     }
     @objc func finishedQuiz () {
-                
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         vc.questions = questions
         vc1.questions = questions
         self.navigationController?.setViewControllers([vc1, vc], animated: true)
     }
-    
+    @objc func quitQuiz() {
+        ViewUtils.showCsAlert(withController: self, title: "Çıkmak istediğinize emin misin?", message: "Eğer çıkış yaparsan skorun kaydedilmeyecek!") { (_) in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc.questions = self.questions
+            self.navigationController?.setViewControllers([vc], animated: true)
+        }
+    }
 }

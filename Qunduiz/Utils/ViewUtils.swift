@@ -22,5 +22,14 @@ class ViewUtils {
         viewController.present(alertController, animated: true, completion:nil)
     }
     //ViewUtils.showAlert(withController: self, title: "Uyarı", message: "hata mesaji buraya")
-    
+    static func showCsAlert(withController viewController: UIViewController, title: String, message: String?, action: @escaping (UIAlertAction) -> Void){
+        let alertController = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Hayir", style: UIAlertAction.Style.cancel, handler: nil)
+        let OKAction = UIAlertAction(title: "Evet", style: UIAlertAction.Style.default, handler: action)
+        alertController.addAction(cancelAction)
+        alertController.addAction(OKAction)
+        viewController.present(alertController, animated: true, completion: nil)
+        
+    }
 }

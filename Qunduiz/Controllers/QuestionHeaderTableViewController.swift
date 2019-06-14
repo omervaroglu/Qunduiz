@@ -12,7 +12,7 @@ class QuestionHeaderTableViewController: UITableViewController {
     var questions : [Questions] = []
     
     override func viewDidLoad() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
     }
     
@@ -59,4 +59,11 @@ class QuestionHeaderTableViewController: UITableViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func quitQuiz() {
+        ViewUtils.showCsAlert(withController: self, title: "Çıkmak istediğinize emin misin?", message: "Eğer çıkış yaparsan skorun kaydedilmeyecek!") { (_) in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc.questions = self.questions
+            self.navigationController?.setViewControllers([vc], animated: true)
+        }
+    }
 }

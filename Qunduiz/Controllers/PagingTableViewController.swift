@@ -114,13 +114,11 @@ class PagingTableViewController: UITableViewController {
             self.index = self.index + 1
         }
     }
-    
     @objc func quitQuiz() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-        let vc1 = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        vc.questions = questions
-        vc1.questions = questions
-        self.navigationController?.setViewControllers([vc1, vc], animated: true)
-        self.index = 0
+        ViewUtils.showCsAlert(withController: self, title: "Çıkmak istediğinize emin misin?", message: "Eğer çıkış yaparsan skorun kaydedilmeyecek!") { (_) in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc.questions = self.questions
+            self.navigationController?.setViewControllers([vc], animated: true)
+        }
     }
 }
