@@ -21,7 +21,6 @@ class HighScoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         getData()
-        //tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
     }
 

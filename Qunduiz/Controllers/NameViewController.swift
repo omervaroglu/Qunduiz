@@ -15,17 +15,24 @@ class NameViewController: UIViewController {
     var questions : [Questions] = []
     var score  = 0
     
-    var scoreList : [Score] = [] 
+    var scoreList : [Score] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+    }
     
     @IBAction func buttonAction(_ sender: Any) {
         if nameField.text == "" {
             ViewUtils.showAlert(withController: self, title: "Hata", message: "İsim bölümü boş bırakılamaz.")
+        } else if nameControl() == true {
+            ViewUtils.showAlert(withController: self, title: "Hata", message: "Bu isim daha önce kullanılmış.Lütfen başka bir isim kullanınız.")
+            
         } else {
-        saveData()
-        let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController
-        let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        vc1.questions = questions
-        navigationController?.setViewControllers([vc1,vc], animated: true)
+            saveData()
+            let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController
+            let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc1.questions = questions
+            navigationController?.setViewControllers([vc1,vc], animated: true)
         }
     }
     
@@ -63,5 +70,13 @@ class NameViewController: UIViewController {
         } catch  {
             
         }
+    }
+    func nameControl () -> Bool {
+        for score in scoreList {
+            if self.nameField.text == score.name {
+                return true
+            }
+        }
+        return false
     }
 }

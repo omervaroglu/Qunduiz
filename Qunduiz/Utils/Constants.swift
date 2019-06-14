@@ -30,12 +30,5 @@ import UIKit
         ]
     }
     static var scoreList : [Score] = []
-    
-    @objc static func quitQuiz(_ viewController: UIViewController ) {
-        ViewUtils.showCsAlert(withController: viewController, title: "Çıkmak istediğinize emin misin?", message: "Eğer çıkış yaparsan skorun kaydedilmeyecek!") { (_) in
-            let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            viewController.navigationController?.setViewControllers([vc], animated: true)
-        }
-    }
-    
+
 }
