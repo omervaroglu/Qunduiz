@@ -18,7 +18,7 @@ class HighScoreTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-    
+    var scoreName : String = ""
     override func viewDidLoad() {
         getData()
         tableView.estimatedRowHeight = 300
@@ -47,6 +47,11 @@ class HighScoreTableViewController: UITableViewController {
                 cell.scoreNameLabel.text = scoreList[indexPath.row].name
                 cell.scoreLabel.text = "Score: \(String(scoreList[indexPath.row].score))"
                 return cell
+            }
+            if scoreName != "" {
+                if scoreList[indexPath.row].name == scoreName {
+                    tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.middle, animated: true)
+                }
             }
     }
     

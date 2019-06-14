@@ -32,6 +32,7 @@ class NameViewController: UIViewController {
             let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController
             let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             vc1.questions = questions
+            vc.scoreName = nameField.text!
             navigationController?.setViewControllers([vc1,vc], animated: true)
         }
     }
