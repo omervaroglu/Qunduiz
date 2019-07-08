@@ -31,10 +31,6 @@
             "type":"matematik",
             "answers":[
                 {
-                    "name":"5,42",
-                    "isTrue":"false"
-                },
-                {
                     "name": "3,14",
                     "isTrue":"true"
                 },
@@ -44,6 +40,10 @@
                 },
                 {
                     "name":"2.89",
+                    "isTrue":"false"
+                },
+                {
+                    "name":"3.09",
                     "isTrue":"false"
                 }
             ]

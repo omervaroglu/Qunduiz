@@ -26,7 +26,6 @@ class NameViewController: UIViewController {
             ViewUtils.showAlert(withController: self, title: "Hata", message: "İsim bölümü boş bırakılamaz.")
         } else if nameControl() == true {
             ViewUtils.showAlert(withController: self, title: "Hata", message: "Bu isim daha önce kullanılmış.Lütfen başka bir isim kullanınız.")
-            
         } else {
             saveData()
             let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController

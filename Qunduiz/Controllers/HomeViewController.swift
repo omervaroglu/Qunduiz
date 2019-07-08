@@ -20,7 +20,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.title = "Qunduiz"
+        let logoView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
+        
+        let imageView = UIImageView(frame: logoView.frame)
+        imageView.image = UIImage(named: "qunduizTitle")
+        logoView.addSubview(imageView)
+        navigationItem.titleView = logoView
+//        self.navigationItem.titleView = UIImageView(image: UIImage(named: "qunduizTitle"))
     }
     override func viewWillAppear(_ animated: Bool) {
         setSelected()

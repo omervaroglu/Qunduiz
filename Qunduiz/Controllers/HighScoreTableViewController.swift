@@ -19,9 +19,13 @@ class HighScoreTableViewController: UITableViewController {
         }
     }
     var scoreName : String = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        scrollScore()
+    }
     override func viewDidLoad() {
-        getData()
         tableView.estimatedRowHeight = 300
+        getData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,11 +52,6 @@ class HighScoreTableViewController: UITableViewController {
                 cell.scoreLabel.text = "Score: \(String(scoreList[indexPath.row].score))"
                 return cell
             }
-            if scoreName != "" {
-                if scoreList[indexPath.row].name == scoreName {
-                    tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.middle, animated: true)
-                }
-            }
     }
     
     func getData() {
@@ -71,4 +70,15 @@ class HighScoreTableViewController: UITableViewController {
             
         }
     }
+    
+    func scrollScore () {
+        var i = 0
+        for score in scoreList {
+            i = i + 1
+            if score.name! == scoreName {
+                tableView.scrollToRow(at: IndexPath(row: i, section: 0), at: .bottom, animated: true)
+            }
+        }
+    }
+    
 }
