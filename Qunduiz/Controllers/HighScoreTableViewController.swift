@@ -18,7 +18,7 @@ class HighScoreTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-    var scoreName : String = ""
+    var score : Score?
     
     override func viewWillAppear(_ animated: Bool) {
         scrollScore()
@@ -60,7 +60,6 @@ class HighScoreTableViewController: UITableViewController {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Score")
         fetchRequest.returnsObjectsAsFaults = false
-        
         do {
             let results = try context.fetch(fetchRequest)
             if results.count > 0 {
@@ -72,13 +71,23 @@ class HighScoreTableViewController: UITableViewController {
     }
     
     func scrollScore () {
-        var i = 0
-        for score in scoreList {
-            i = i + 1
-            if score.name! == scoreName {
-                tableView.scrollToRow(at: IndexPath(row: i, section: 0), at: .bottom, animated: true)
-            }
+        if let score = score {
+            self.tableView.scrollToRow(at: IndexPath(row: scoreList.index(of: score) ?? 0, section: 0), at: UITableView.ScrollPosition.middle, animated: true)
         }
+        
+        
+//
+//        var i = 0
+//        UIView.animate(withDuration: 1) {
+//
+//
+//            for score in self.scoreList {
+//                i = i + 1
+//                if score.name! == self.scoreName {
+//                    self.tableView.scrollToRow(at: IndexPath(row: i-1, section: 0), at: .bottom, animated: true)
+//                }
+//            }
+//        }
     }
     
 }

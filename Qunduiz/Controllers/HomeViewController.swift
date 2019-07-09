@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
 //        self.navigationItem.titleView = UIImageView(image: UIImage(named: "qunduizTitle"))
     }
     override func viewWillAppear(_ animated: Bool) {
-        setSelected()
+        self.questions = Utils.setSelected(self.questions)
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
@@ -38,13 +38,13 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func setSelected() {
-        for section in questions.indices {
-            for number in questions[section].answers.indices{
-                if questions[section].answers[number].isSelected {
-                    questions[section].answers[number].isSelected = false
-                }
-            }
-        }
-    }
+//    func setSelected() {
+//        for section in questions.indices {
+//            for number in questions[section].answers.indices{
+//                if questions[section].answers[number].isSelected {
+//                    questions[section].answers[number].isSelected = false
+//                }
+//            }
+//        }
+//    }
 }

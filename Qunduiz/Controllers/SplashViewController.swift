@@ -15,6 +15,7 @@ class SplashViewController: UIViewController {
     var questionList: QuestionList? {
         didSet{
             print(questionList!)
+            
         }
     }
     
@@ -30,6 +31,8 @@ class SplashViewController: UIViewController {
         let path = Bundle.main.path(forResource: "mock_questions_data", ofType: "json")
         guard let filePath = path, let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath))  else { return }
         questionList = Mapper<QuestionList>().map(JSONObject: JSON(jsonData).dictionaryObject)
+        
+        Utils.questions = (questionList?.questions)!
         
         let vc = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         vc.questions = (questionList?.questions)!

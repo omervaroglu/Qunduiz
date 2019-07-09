@@ -10,13 +10,13 @@ import UIKit
 import CoreData
 
 class NameViewController: UIViewController {
+    
     @IBOutlet weak var nameField: UITextField!
     
     var questions : [Questions] = []
     var score  = 0
-    
     var scoreList : [Score] = []
-    
+
     override func viewWillAppear(_ animated: Bool) {
         getData()
     }
@@ -27,20 +27,17 @@ class NameViewController: UIViewController {
         } else if nameControl() == true {
             ViewUtils.showAlert(withController: self, title: "Hata", message: "Bu isim daha önce kullanılmış.Lütfen başka bir isim kullanınız.")
         } else {
-            saveData()
+            let score = saveData()
             let vc = storyboard!.instantiateViewController(withIdentifier: "HighScoreTableViewController") as! HighScoreTableViewController
             let vc1 = storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc1.questions = questions
-            vc.scoreName = nameField.text!
+            vc.score = score
             navigationController?.setViewControllers([vc1,vc], animated: true)
         }
     }
     
-    func saveData () {
-        
+    func saveData()-> Score {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        
         let scores = NSEntityDescription.insertNewObject(forEntityName: "Score", into: context)
         
         scores.setValue(nameField.text, forKey: "name")
@@ -51,7 +48,7 @@ class NameViewController: UIViewController {
         } catch  {
             print("CoreData Error")
         }
-        
+        return scores as! Score
     }
     
     func getData() {
@@ -66,11 +63,10 @@ class NameViewController: UIViewController {
             if results.count > 0 {
                 self.scoreList = results as! [NSManagedObject] as! [Score]
             }
-
         } catch  {
-            
         }
     }
+    
     func nameControl () -> Bool {
         for score in scoreList {
             if self.nameField.text == score.name {

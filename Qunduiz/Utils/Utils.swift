@@ -9,6 +9,7 @@
 import Foundation
 
 class Utils {
+    static var questions : [Questions] = []
     
 //    static func printResponse(response: DataResponse<Any>){
 //        print("\n\n >>Response : (\(response.request?.url!.relativePath ?? ""))")
@@ -23,5 +24,19 @@ class Utils {
     
     static func getAuthorizationKey() -> String {
         return UserDefaults.standard.string(forKey: "registrationSecret") ?? ""
+    }
+    
+    static func setSelected(_ qeustionList: [Questions]) -> [Questions] {
+        var q = qeustionList
+        for section in q.indices {
+            for number in q[section].answers.indices{
+                if q[section].answers[number].isSelected {
+                    q[section].answers[number].isSelected = false
+                    return q
+                }
+                return questions
+            }
+        }
+        return questions
     }
 }
