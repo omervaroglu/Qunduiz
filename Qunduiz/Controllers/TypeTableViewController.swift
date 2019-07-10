@@ -51,19 +51,19 @@ class TypeTableViewController : UITableViewController {
         if listViewSelectedLabel.text ==  "✔️" {
             let vc = storyboard!.instantiateViewController(withIdentifier: "ListTableViewController") as! ListTableViewController
             vc.questions = questions
-            vc.tableView.reloadData()
+            //vc.tableView.reloadData()
             self.navigationController?.setViewControllers([vc], animated: true)
 
         }else if pagingSelectedLabel.text == "✔️"  {
             let vc = storyboard!.instantiateViewController(withIdentifier: "PagingTableViewController") as! PagingTableViewController
             vc.questions = questions
-            vc.tableView.reloadData()
+            //vc.tableView.reloadData()
             self.navigationController?.setViewControllers([vc], animated: true)
 
         }else if lineSelectedLabel.text == "✔️" {
             let vc = storyboard!.instantiateViewController(withIdentifier: "QuestionHeaderTableViewController") as! QuestionHeaderTableViewController
             vc.questions = questions
-            vc.tableView.reloadData()
+            //vc.tableView.reloadData()
             self.navigationController?.setViewControllers([vc], animated: true)
         }else {
             ViewUtils.showAlert(withController: self, title: "HATA!", message: "Lutfen gorunum seciniz.")

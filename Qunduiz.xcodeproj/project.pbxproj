@@ -43,9 +43,11 @@
 		451D57D222AF8E0300C2F395 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D57D122AF8E0300C2F395 /* ResultCell.swift */; };
 		451D57D522B0E52600C2F395 /* BestScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451D57D422B0E52600C2F395 /* BestScoreCell.xib */; };
 		451D57D722B0E6B000C2F395 /* BestScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D57D622B0E6B000C2F395 /* BestScoreCell.swift */; };
+		45311E0422D4BFBF0053BB3A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45311E0322D4BFBF0053BB3A /* PageViewController.swift */; };
 		4562521722B397A9004D7A99 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4562521622B397A9004D7A99 /* BaseTableViewController.swift */; };
 		45B55C8C228C10EA00412D34 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B55C8B228C10EA00412D34 /* NameViewController.swift */; };
 		45C08A3C228EE6E300E86BE0 /* TypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */; };
+		45CD546F22D5E535000837B0 /* PagingUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD546E22D5E535000837B0 /* PagingUIViewController.swift */; };
 		E8F8B297F936ED3DDB3585C4 /* Pods_Qunduiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DCDE4FA954C589938C0F2E /* Pods_Qunduiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,9 +93,11 @@
 		451D57D122AF8E0300C2F395 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		451D57D422B0E52600C2F395 /* BestScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestScoreCell.xib; sourceTree = "<group>"; };
 		451D57D622B0E6B000C2F395 /* BestScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScoreCell.swift; sourceTree = "<group>"; };
+		45311E0322D4BFBF0053BB3A /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		4562521622B397A9004D7A99 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		45B55C8B228C10EA00412D34 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		45C08A3B228EE6E300E86BE0 /* TypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTableViewController.swift; sourceTree = "<group>"; };
+		45CD546E22D5E535000837B0 /* PagingUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 		176DEE5222549CAD00B54B00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45311DFF22D4B8540053BB3A /* PageViewControllers */,
 				176DEE5C2254C71500B54B00 /* CustomControllers */,
 				176DEE4E2254991B00B54B00 /* SplashViewController.swift */,
 				17FABE042258FFFA00029357 /* HomeViewController.swift */,
@@ -292,6 +297,15 @@
 				451D57D622B0E6B000C2F395 /* BestScoreCell.swift */,
 			);
 			path = BestScoreCell;
+			sourceTree = "<group>";
+		};
+		45311DFF22D4B8540053BB3A /* PageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45311E0322D4BFBF0053BB3A /* PageViewController.swift */,
+				45CD546E22D5E535000837B0 /* PagingUIViewController.swift */,
+			);
+			path = PageViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,10 +450,12 @@
 				176DEE572254A8F100B54B00 /* Answers.swift in Sources */,
 				17FABE052258FFFA00029357 /* HomeViewController.swift in Sources */,
 				176DEE582254A8F100B54B00 /* QuestionList.swift in Sources */,
+				45CD546F22D5E535000837B0 /* PagingUIViewController.swift in Sources */,
 				176DEE4F2254991B00B54B00 /* SplashViewController.swift in Sources */,
 				176DEE662254F1B200B54B00 /* QuestionCell.swift in Sources */,
 				4562521722B397A9004D7A99 /* BaseTableViewController.swift in Sources */,
 				17B75E382260E7F60006C591 /* QuestionHeaderTableViewController.swift in Sources */,
+				45311E0422D4BFBF0053BB3A /* PageViewController.swift in Sources */,
 				45C08A3C228EE6E300E86BE0 /* TypeTableViewController.swift in Sources */,
 				176DEE6F2254FA6600B54B00 /* UIColor.swift in Sources */,
 				17FABE0C225BAA4600029357 /* HighScoreCell.swift in Sources */,

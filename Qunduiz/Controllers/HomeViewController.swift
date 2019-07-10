@@ -33,9 +33,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
-        let vc = storyboard!.instantiateViewController(withIdentifier: "TypeTableViewController") as! TypeTableViewController
-        vc.questions = questions
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard!.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+ //       vc.questions = questions
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
 //    func setSelected() {

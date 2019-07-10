@@ -23,9 +23,9 @@ class PagingTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(nextQuestions))
     }
-    override func viewWillAppear(_ animated: Bool) {
-        Utils.setSelected(questions)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        Utils.setSelected(questions)
+//    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -78,13 +78,11 @@ class PagingTableViewController: UITableViewController {
             let cell = tableView.cellForRow(at: indexPath) as! AnswerCell
 
             if questions[self.index].answers[indexPath.row].isSelected {
-//                Utils.setSelected(questions)
                 questions[self.index].answers[indexPath.row].isSelected = false
                 cell.answerView.layer.borderColor = UIColor.orange.cgColor
                 print(questions[self.index].answers[indexPath.row].isSelected)
             } else {
                 cell.answerView.layer.borderColor = UIColor.cyan.cgColor
-//                Utils.setSelected(questions)
                 questions[self.index].answers[indexPath.row].isSelected = true
                 print(questions[self.index].answers[indexPath.row].isSelected)
             }
@@ -93,15 +91,7 @@ class PagingTableViewController: UITableViewController {
         }
             self.tableView.reloadData()
     }
-    
-//    func setSelected() {
-//        for number in questions[self.index].answers.indices {
-//            if questions[self.index].answers[number].isSelected {
-//                questions[self.index].answers[number].isSelected = false
-//            }
-//        }
-//    }
-    
+
     @objc func nextQuestions() {
         if self.index == questions.count - 1  {
             let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController

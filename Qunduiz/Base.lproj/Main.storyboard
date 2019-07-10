@@ -214,6 +214,85 @@
             </objects>
             <point key="canvasLocation" x="2517.5999999999999" y="381.85907046476763"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="W6Y-qR-Vr5">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="R6S-um-9Up" customClass="PageViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp0-rs-N44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3462" y="382"/>
+        </scene>
+        <!--PagingUI View Controller-->
+        <scene sceneID="Gqj-O3-0b0">
+            <objects>
+                <viewController storyboardIdentifier="PagingUIViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sbi-gB-ctM" customClass="PagingUIViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WxU-Gm-VRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-3A-bsv">
+                                <rect key="frame" x="32" y="52" width="311" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="292" id="WZF-EY-67M"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNE-2H-3bf" customClass="CustomButton" customModule="Qunduiz" customModuleProvider="target">
+                                <rect key="frame" x="32" y="567" width="311" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="IhQ-Nr-9pI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="SEÇ"/>
+                                <connections>
+                                    <action selector="chooseAction:" destination="sbi-gB-ctM" eventType="touchUpInside" id="uoU-Tn-LU0"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="85H-fS-pCe">
+                                <rect key="frame" x="32" y="472" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Z35-Qo-wTT"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.92075508829999997" green="0.59115731719999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.17431613800000001" green="0.56986463070000004" blue="0.74490374329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-7c-dum">
+                                <rect key="frame" x="32" y="408" width="311" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0MY-Ss-Kwt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YNE-2H-3bf" firstAttribute="leading" secondItem="fEz-3A-bsv" secondAttribute="leading" id="418-qA-oG5"/>
+                            <constraint firstItem="2kt-7c-dum" firstAttribute="trailing" secondItem="fEz-3A-bsv" secondAttribute="trailing" id="4TK-ob-zkQ"/>
+                            <constraint firstItem="fEz-3A-bsv" firstAttribute="leading" secondItem="3Zf-J8-eWg" secondAttribute="leading" constant="32" id="5af-4w-CGw"/>
+                            <constraint firstItem="YNE-2H-3bf" firstAttribute="trailing" secondItem="fEz-3A-bsv" secondAttribute="trailing" id="MA2-wY-Pke"/>
+                            <constraint firstItem="2kt-7c-dum" firstAttribute="top" secondItem="fEz-3A-bsv" secondAttribute="bottom" constant="64" id="PWK-Nf-x2G"/>
+                            <constraint firstItem="fEz-3A-bsv" firstAttribute="top" secondItem="3Zf-J8-eWg" secondAttribute="top" constant="32" id="TUY-CI-WmH"/>
+                            <constraint firstItem="85H-fS-pCe" firstAttribute="leading" secondItem="fEz-3A-bsv" secondAttribute="leading" id="W34-oa-aqh"/>
+                            <constraint firstItem="85H-fS-pCe" firstAttribute="top" secondItem="2kt-7c-dum" secondAttribute="bottom" constant="32" id="cWg-pz-oIO"/>
+                            <constraint firstItem="2kt-7c-dum" firstAttribute="leading" secondItem="fEz-3A-bsv" secondAttribute="leading" id="d1r-BD-0f2"/>
+                            <constraint firstItem="YNE-2H-3bf" firstAttribute="top" secondItem="85H-fS-pCe" secondAttribute="bottom" constant="55" id="fy6-eH-Sba"/>
+                            <constraint firstItem="3Zf-J8-eWg" firstAttribute="trailing" secondItem="fEz-3A-bsv" secondAttribute="trailing" constant="32" id="jfm-w1-44x"/>
+                            <constraint firstItem="85H-fS-pCe" firstAttribute="trailing" secondItem="fEz-3A-bsv" secondAttribute="trailing" id="uaF-oe-stH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Zf-J8-eWg"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="YNE-2H-3bf" id="6cY-ec-k0s"/>
+                        <outlet property="pageControl" destination="85H-fS-pCe" id="GuI-U4-aNj"/>
+                        <outlet property="pagingImageView" destination="fEz-3A-bsv" id="6bw-1e-3X3"/>
+                        <outlet property="pagingLabel" destination="2kt-7c-dum" id="MGM-0y-otd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tka-cS-Jx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4336.8000000000002" y="381.85907046476763"/>
+        </scene>
         <!--List Table View Controller-->
         <scene sceneID="WdS-mr-9wF">
             <objects>
