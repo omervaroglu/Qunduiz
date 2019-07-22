@@ -14,6 +14,7 @@ class QuestionHeaderTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishedQuiz))
+        questions = Utils.questions
     }
     
     @objc func finishedQuiz () {

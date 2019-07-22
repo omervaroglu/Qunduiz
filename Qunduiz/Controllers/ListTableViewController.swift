@@ -15,6 +15,7 @@ class ListTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(finishedQuiz))
+        questions = Utils.questions
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

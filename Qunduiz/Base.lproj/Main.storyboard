@@ -217,7 +217,7 @@
         <!--Page View Controller-->
         <scene sceneID="W6Y-qR-Vr5">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="R6S-um-9Up" customClass="PageViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="R6S-um-9Up" customClass="PageViewController" customModule="Qunduiz" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rp0-rs-N44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3462" y="382"/>
@@ -237,12 +237,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNE-2H-3bf" customClass="CustomButton" customModule="Qunduiz" customModuleProvider="target">
-                                <rect key="frame" x="32" y="567" width="311" height="45"/>
+                                <rect key="frame" x="32" y="544" width="311" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="IhQ-Nr-9pI"/>
+                                    <constraint firstAttribute="height" constant="60" id="IhQ-Nr-9pI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="SEÇ"/>
+                                <state key="normal" title="SEÇ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="chooseAction:" destination="sbi-gB-ctM" eventType="touchUpInside" id="uoU-Tn-LU0"/>
                                 </connections>
@@ -276,7 +278,7 @@
                             <constraint firstItem="85H-fS-pCe" firstAttribute="leading" secondItem="fEz-3A-bsv" secondAttribute="leading" id="W34-oa-aqh"/>
                             <constraint firstItem="85H-fS-pCe" firstAttribute="top" secondItem="2kt-7c-dum" secondAttribute="bottom" constant="32" id="cWg-pz-oIO"/>
                             <constraint firstItem="2kt-7c-dum" firstAttribute="leading" secondItem="fEz-3A-bsv" secondAttribute="leading" id="d1r-BD-0f2"/>
-                            <constraint firstItem="YNE-2H-3bf" firstAttribute="top" secondItem="85H-fS-pCe" secondAttribute="bottom" constant="55" id="fy6-eH-Sba"/>
+                            <constraint firstItem="YNE-2H-3bf" firstAttribute="top" secondItem="85H-fS-pCe" secondAttribute="bottom" constant="32" id="fy6-eH-Sba"/>
                             <constraint firstItem="3Zf-J8-eWg" firstAttribute="trailing" secondItem="fEz-3A-bsv" secondAttribute="trailing" constant="32" id="jfm-w1-44x"/>
                             <constraint firstItem="85H-fS-pCe" firstAttribute="trailing" secondItem="fEz-3A-bsv" secondAttribute="trailing" id="uaF-oe-stH"/>
                         </constraints>

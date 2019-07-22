@@ -22,6 +22,7 @@ class PagingTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Testi Sonlandır", style: UIBarButtonItem.Style.plain, target: self, action: #selector(quitQuiz))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Devam", style: .plain, target: self, action: #selector(nextQuestions))
+        questions = Utils.questions
     }
 //    override func viewWillAppear(_ animated: Bool) {
 //        Utils.setSelected(questions)

@@ -14,9 +14,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate {
     //let imageNames = ["pagingView", "listView", "lineSelected"]
     fileprivate lazy var pages: [UIViewController] = {
         return [
-            self.getViewController(withIdentifier: "pagingView", 0, "pagingView", "Sayfa Gorunumu"),
-            self.getViewController(withIdentifier: "listView", 1, "listView", "Liste Gorunumu"),
-            self.getViewController(withIdentifier: "lineSelected", 2, "lineSelected", "Sirali Gorunum")
+            self.getViewController(withIdentifier: "pagingView", 0, "paging", "Sayfa Görünümü", "PagingTableViewController"),
+            self.getViewController(withIdentifier: "listView", 1, "list", "Liste Görünümü", "ListTableViewController"),
+            self.getViewController(withIdentifier: "lineSelected", 2, "inline", "Sıralı Görünüm", "QuestionHeaderTableViewController")
         ]
     }()
     
@@ -25,14 +25,16 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate {
         self.delegate = self
         
         if let firstVC = pages.first {
-            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+            setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
         }
     }
     
-    fileprivate func getViewController(withIdentifier identifier: String, _ id: Int, _ imagaName: String, _ viewName: String) -> UIViewController {
+    fileprivate func getViewController(withIdentifier identifier: String, _ id: Int, _ imagaName: String, _ viewName: String, _ vcName: String) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PagingUIViewController") as! PagingUIViewController
         vc.imageName = imagaName
         vc.viewName = viewName
+        vc.viewCont = vcName
+        vc.id = id
         return vc
     }
 }
